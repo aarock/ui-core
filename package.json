@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "author": "Aaron Gale",
   "license": "ISC",
-  "private": true,
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
