@@ -27,7 +27,7 @@ export * from "./use-measure"
 export * from "./animation"
 export * from "./provider"
 // KIT CANDIDATES //
-export * from "./color"
+// export * from "./color"
 export * from "./gradient"
 
 declare module '@tamagui/core' {

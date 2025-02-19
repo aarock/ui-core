@@ -1,0 +1,26 @@
+import { PropsWithChildren } from "react";
+import type * as _ from 'react-native-svg';
+export type SvgProps = _.SvgProps;
+declare function Circle(props: _.CircleProps): import("react/jsx-runtime").JSX.Element;
+declare function ClipPath(props: _.ClipPathProps): import("react/jsx-runtime").JSX.Element;
+declare function Defs(props: PropsWithChildren): import("react/jsx-runtime").JSX.Element;
+declare function Ellipse(props: _.EllipseProps): import("react/jsx-runtime").JSX.Element;
+declare function G<T>(props: _.GProps): import("react/jsx-runtime").JSX.Element;
+declare function Line(props: _.LineProps): import("react/jsx-runtime").JSX.Element;
+declare function LinearGradient(props: _.LinearGradientProps): import("react/jsx-runtime").JSX.Element;
+declare function Path(props: _.PathProps): import("react/jsx-runtime").JSX.Element;
+declare function Polygon(props: _.PolygonProps): import("react/jsx-runtime").JSX.Element;
+declare function Polyline(props: _.PolylineProps): import("react/jsx-runtime").JSX.Element;
+declare function RadialGradient(props: _.RadialGradientProps): import("react/jsx-runtime").JSX.Element;
+declare function Rect(props: _.RectProps): import("react/jsx-runtime").JSX.Element;
+declare function Stop(props: _.StopProps): import("react/jsx-runtime").JSX.Element;
+declare function Symbol(props: _.SymbolProps): import("react/jsx-runtime").JSX.Element;
+declare function TSpan(props: _.TSpanProps): import("react/jsx-runtime").JSX.Element;
+declare function TextPath(props: _.TextPathProps): import("react/jsx-runtime").JSX.Element;
+declare function Use(props: _.UseProps): import("react/jsx-runtime").JSX.Element;
+declare function Mask(props: _.MaskProps): import("react/jsx-runtime").JSX.Element;
+declare function Pattern(props: _.PatternProps): import("react/jsx-runtime").JSX.Element;
+declare const Svg: import("react").ForwardRefExoticComponent<_.SvgProps & import("react").RefAttributes<any>>;
+export { Circle, ClipPath, Defs, Ellipse, G, Line, LinearGradient, Mask, Path, Pattern, Polygon, Polyline, RadialGradient, Rect, Stop, Svg, Symbol, TSpan, TextPath, Use };
+export default Svg;
+//# sourceMappingURL=index.d.ts.map

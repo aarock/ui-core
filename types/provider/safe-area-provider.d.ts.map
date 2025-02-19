@@ -1,0 +1,1 @@
+{"version":3,"file":"safe-area-provider.d.ts","sourceRoot":"","sources":["../../src/provider/safe-area-provider.tsx"],"names":[],"mappings":"AAEA,eAAO,MAAM,gBAAgB;;EAAW,CAAA;AAExC,MAAM,WAAW,UAAU;IACzB,GAAG,EAAE,MAAM,CAAA;IACX,KAAK,EAAE,MAAM,CAAA;IACb,MAAM,EAAE,MAAM,CAAA;IACd,IAAI,EAAE,MAAM,CAAA;CACb;AAED,wBAAgB,aAAa,IAAI,UAAU,CAE1C"}

@@ -61,7 +61,7 @@ const InputFieldBase = styled( TextInput, {
     }
 } as const, { accept: { placeholderColor: 'color' } } as const )
 
-export const InputField = InputFieldBase.styleable( ( props, ref ) => {
+export const InputField = InputFieldBase.styleable( ( props ) => {
 
     const { value, onValueChange, onChange } = useContext( Context )
 
@@ -74,7 +74,6 @@ export const InputField = InputFieldBase.styleable( ( props, ref ) => {
         "black"
 
     return <InputFieldBase
-        ref={ ref }
         editable={ !props.disabled }
         placeholderTextColor={ placeholderTextColor }
         { ...props }

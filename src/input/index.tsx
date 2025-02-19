@@ -77,7 +77,7 @@ const InputFrameBase = styled( Stack, {
 } )
 
 export type InputFrameProps = GetProps<typeof InputFrame>
-const InputFrame = InputFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, ...props }, ref ) => {
+const InputFrame = InputFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, ...props } ) => {
   const [ isFocused, setIsFocused ] = useState( false )
   const variant = props?.variant || "default"
   const variantProps: any = InputFrameBase?.staticConfig?.variants?.variant?.[ variant ]
@@ -86,7 +86,6 @@ const InputFrame = InputFrameBase.styleable<ContextProps>( ( { value, onFocus, o
   return <Context.Provider value={ { value, onValueChange } }>
     <InputFrameBase
       tabIndex={ -1 }
-      ref={ ref }
       onFocus={ ( ...args ) => {
         setIsFocused( true )
         onFocus?.( ...args )

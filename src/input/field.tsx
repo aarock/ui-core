@@ -1,5 +1,5 @@
-import { ChangeEvent, useContext } from 'react'
-import { styled, type GetProps, Text } from '@tamagui/core'
+import { ChangeEvent, useContext } from "react"
+import { styled, type GetProps, Text } from "@tamagui/core"
 import { Context, StyledContext } from "./context"
 
 export type InputFieldProps = GetProps<typeof InputFieldBase>
@@ -15,15 +15,15 @@ const InputFieldBase = styled( Text, {
         variant: {
 
             default: {
-                color: '$neutral12',
-                hoverStyle: { color: '$neutral12' },
-                focusStyle: { color: '$neutral12' },
+                color: "$neutral12",
+                hoverStyle: { color: "$neutral12" },
+                focusStyle: { color: "$neutral12" },
             },
 
             mute: {
-                color: '$neutral8',
-                hoverStyle: { color: '$neutral8' },
-                focusStyle: { color: '$neutral8' },
+                color: "$neutral8",
+                hoverStyle: { color: "$neutral8" },
+                focusStyle: { color: "$neutral8" },
             },
 
         },
@@ -48,21 +48,20 @@ const InputFieldBase = styled( Text, {
             // } )
         }
     },
-    defaultVariants: { variant: 'default' }
+    defaultVariants: { variant: "default" }
 } as const, {
-    accept: { placeholderColor: 'color' },
-    defaultProps: { placeholder: '' as string },
+    accept: { placeholderColor: "color" },
+    defaultProps: { placeholder: "" as string },
 } as const )
 
 export const InputField = InputFieldBase.styleable<{
     value?: string,
     onChange?: ( value: ChangeEvent<HTMLInputElement> ) => void
-}>( ( { onChange, ...props }, ref ) => {
+}>( ( { onChange, ...props } ) => {
 
     const { value, onValueChange } = useContext( Context )
 
     return <InputFieldBase
-        ref={ ref }
         value={ value }
         //@ts-ignore
         onChange={ event => {

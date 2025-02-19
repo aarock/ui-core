@@ -4,7 +4,7 @@ export type Bounds = { top: number, left: number, width: number, height: number 
 
 export function useMeasure (): [ Ref<any>, Bounds ] {
 
-    const lastRef = useRef<any>()
+    const lastRef = useRef<any>( null )
     const [ bounds, setBounds ] = useState<Bounds>( { top: 0, left: 0, width: 0, height: 0 } )
 
     const ref = useCallback( ( node: any ) => {

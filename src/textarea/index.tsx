@@ -77,7 +77,7 @@ const TextAreaFrameBase = styled( Stack, {
 } )
 
 export type TextAreaFrameProps = GetProps<typeof TextAreaFrame>
-const TextAreaFrame = TextAreaFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, ...props }, ref ) => {
+const TextAreaFrame = TextAreaFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, ...props } ) => {
   const [ isFocused, setIsFocused ] = useState( false )
   const variant = props?.variant || "default"
   const variantProps: any = TextAreaFrameBase?.staticConfig?.variants?.variant?.[ variant ]
@@ -86,7 +86,6 @@ const TextAreaFrame = TextAreaFrameBase.styleable<ContextProps>( ( { value, onFo
   return <Context.Provider value={ { value, onValueChange } }>
     <TextAreaFrameBase
       tabIndex={ -1 }
-      ref={ ref }
       onFocus={ ( ...args ) => {
         setIsFocused( true )
         onFocus?.( ...args )

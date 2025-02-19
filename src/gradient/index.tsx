@@ -19,9 +19,7 @@ const GradientFrame = styled(YStack, {
   position: 'relative',
 })
 
-export const Gradient = GradientFrame.styleable<GradientExtraProps>(
-  (propsIn, ref) => {
-    const props = useProps(propsIn)
+export const Gradient = GradientFrame.styleable<GradientExtraProps>( props => {
 
     const { start, end, colors: colorsProp, locations, children, ...stackProps } = props
     const theme = useTheme()
@@ -32,7 +30,7 @@ export const Gradient = GradientFrame.styleable<GradientExtraProps>(
       }) || []
 
     return (
-      <GradientFrame ref={ref as any} {...stackProps}>
+      <GradientFrame {...stackProps}>
         <LinearGradientBase
           //@ts-ignore
           start={start}
