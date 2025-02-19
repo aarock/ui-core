@@ -23,8 +23,6 @@
     "dev": "tamagui-build --watch",
     "watch": "tamagui-build --watch"
   },
-  "@tamagui/polyfill-dev": "^1.110",
-  "@aarock/ui-fonts": "^1.0",
   "dependencies": {
     "@dnd-kit/core": "^6.3",
     "@dnd-kit/sortable": "^10.0",
@@ -59,9 +57,17 @@
     "react-native": "*",
     "react-native-reanimated": ">=3.14"
   },
+  "overrides":{
+    "react": "^19.0",
+    "react-native": "^0.78.0-rc.5"
+  },
+  "resolutions":{
+    "react": "^19.0",
+    "react-native": "^0.78.0-rc.5"
+  },
   "devDependencies": {
     "react": "^19.0",
-    "react-native": "^0.76",
+    "react-native": "^0.78.0-rc.5",
     "@tamagui/build": "^1.110",
     "@types/react": "^19.0",
     "@types/react-dom": "^19.0",
