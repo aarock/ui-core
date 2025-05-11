@@ -23,6 +23,8 @@
     "dev": "tamagui-build --watch",
     "watch": "tamagui-build --watch"
   },
+  "@react-spring/native": "^9.7",
+  "@react-spring/web": "^9.7",
   "dependencies": {
     "@dnd-kit/core": "^6.3",
     "@dnd-kit/sortable": "^10.0",
@@ -31,8 +33,8 @@
     "@mgcrea/react-native-dnd": "^2.2.0",
     "@radix-ui/colors": "^3.0",
     "@radix-ui/react-slot": "^1.0",
-    "@react-spring/native": "^9.7",
-    "@react-spring/web": "^9.7",
+    "@react-spring/native": "^10.0.0-beta.0",
+    "@react-spring/web": "^10.0.0-beta.0",
     "@tamagui/animate-presence": "^1.110",
     "@tamagui/config": "^1.110",
     "@tamagui/core": "^1.110",
@@ -57,17 +59,10 @@
     "react-native": "*",
     "react-native-reanimated": ">=3.14"
   },
-  "overrides":{
-    "react": "^19.0",
-    "react-native": "^0.78.0-rc.5"
-  },
-  "resolutions":{
-    "react": "^19.0",
-    "react-native": "^0.78.0-rc.5"
-  },
   "devDependencies": {
     "react": "^19.0",
-    "react-native": "^0.78.0-rc.5",
+    "react-dom": "^19.0",
+    "react-native": "^0.79.2",
     "@tamagui/build": "^1.110",
     "@types/react": "^19.0",
     "@types/react-dom": "^19.0",
