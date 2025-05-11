@@ -30,6 +30,6 @@ export declare const Portal: import("@tamagui/core").TamaguiComponent<import("@t
 }>> & {
     host?: any;
     inactive?: boolean;
-    stackZIndex?: boolean | number;
+    stackZIndex?: import("@tamagui/z-index-stack").StackZIndexProp;
 }, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic>;
 //# sourceMappingURL=index.d.ts.map

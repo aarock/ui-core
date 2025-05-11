@@ -24,7 +24,7 @@ export * from "./input"
 export * from "./textarea"
 export * from "./use-measure"
 // COMPOSITION //
-// export * from "./animation"
+export * from "./animation"
 export * from "./provider"
 // KIT CANDIDATES //
 // export * from "./color"
