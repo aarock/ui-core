@@ -33,8 +33,8 @@
     "@mgcrea/react-native-dnd": "^2.2.0",
     "@radix-ui/colors": "^3.0",
     "@radix-ui/react-slot": "^1.0",
-    "@react-spring/native": "^10.0.0-beta.0",
-    "@react-spring/web": "^10.0.0-beta.0",
+    "@react-spring/native": "^10.0.1",
+    "@react-spring/web": "^10.0.1",
     "@tamagui/animate-presence": "^1.110",
     "@tamagui/config": "^1.110",
     "@tamagui/core": "^1.110",
@@ -44,15 +44,15 @@
     "@tamagui/portal": "^1.110",
     "@tamagui/stacks": "^1.110",
     "@tanstack/react-virtual": "^3.1",
-    "expo-blur": "^14.0",
-    "expo-font": "^13.0",
-    "expo-linear-gradient": "^14.0",
+    "expo-blur": "^15.0",
+    "expo-font": "^14.0",
+    "expo-linear-gradient": "^15.0",
     "react-native-draggable-flatlist": "^4.0",
     "react-native-gesture-handler": "^2.16",
     "react-native-haptic-feedback": "^2.2",
     "react-native-safe-area-context": "^5.2",
     "react-native-svg": "^15.1",
-    "react-window": "^1.8"
+    "react-window": "^2.2"
   },
   "peerDependencies": {
     "react": "*",
@@ -60,9 +60,9 @@
     "react-native-reanimated": ">=3.14"
   },
   "devDependencies": {
-    "react": "^19.0",
-    "react-dom": "^19.0",
-    "react-native": "^0.79.2",
+    "react": "^19.2",
+    "react-dom": "^19.2",
+    "react-native": "^0.82.1",
     "@tamagui/build": "^1.110",
     "@types/react": "^19.0",
     "@types/react-dom": "^19.0",

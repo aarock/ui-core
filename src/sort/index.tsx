@@ -41,9 +41,7 @@ export function Sort<T> ( {
                 items={ (value||[])?.map?.( v => getKey( v ) ) }
                 strategy={ verticalListSortingStrategy }
             >{ (value||[])?.map( ( item, index ) => (
-                <Sortable key={ getKey( item ) } id={ getKey( item ) } render={ options => renderItem?.(
-                    item, options, index
-                ) } />
+                <Sortable key={ getKey( item ) } id={ getKey( item ) } render={ options => renderItem?.( item, options, index ) } />
             ) ) }{ !(value||[])?.length && renderEmpty?.() }</SortableContext>
         </DndProvider>
     </YStack>
