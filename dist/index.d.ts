@@ -21,7 +21,6 @@ export * from "./textarea";
 export * from "./use-measure";
 export * from "./animation";
 export * from "./provider";
-export * from "./color";
 export * from "./gradient";
 declare module '@tamagui/core' {
     interface TypeOverride {

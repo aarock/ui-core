@@ -1,6 +1,6 @@
 import { useCallback, useState, useRef } from "react";
 export function useMeasure() {
-    const lastRef = useRef();
+    const lastRef = useRef(null);
     const [bounds, setBounds] = useState({ top: 0, left: 0, width: 0, height: 0 });
     const ref = useCallback((node) => {
         if (lastRef.current !== node && node) {

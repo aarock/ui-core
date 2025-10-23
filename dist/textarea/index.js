@@ -76,7 +76,7 @@ const TextAreaFrameBase = styled(Stack, {
         }
     },
 });
-const TextAreaFrame = TextAreaFrameBase.styleable((_a, ref) => {
+const TextAreaFrame = TextAreaFrameBase.styleable((_a) => {
     var _b, _c, _d;
     var { value, onFocus, onBlur, onValueChange } = _a, props = __rest(_a, ["value", "onFocus", "onBlur", "onValueChange"]);
     const [isFocused, setIsFocused] = useState(false);
@@ -84,7 +84,7 @@ const TextAreaFrame = TextAreaFrameBase.styleable((_a, ref) => {
     const variantProps = (_d = (_c = (_b = TextAreaFrameBase === null || TextAreaFrameBase === void 0 ? void 0 : TextAreaFrameBase.staticConfig) === null || _b === void 0 ? void 0 : _b.variants) === null || _c === void 0 ? void 0 : _c.variant) === null || _d === void 0 ? void 0 : _d[variant];
     const focusProps = isFocused ? variantProps === null || variantProps === void 0 ? void 0 : variantProps.focusStyle : {};
     const hoverProps = isFocused ? { hoverStyle: variantProps === null || variantProps === void 0 ? void 0 : variantProps.focusStyle } : {};
-    return _jsx(Context.Provider, { value: { value, onValueChange }, children: _jsx(TextAreaFrameBase, Object.assign({ tabIndex: -1, ref: ref, onFocus: (...args) => {
+    return _jsx(Context.Provider, { value: { value, onValueChange }, children: _jsx(TextAreaFrameBase, Object.assign({ tabIndex: -1, onFocus: (...args) => {
                 setIsFocused(true);
                 onFocus === null || onFocus === void 0 ? void 0 : onFocus(...args);
             }, onBlur: (...args) => {

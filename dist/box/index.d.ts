@@ -1,16 +1,16 @@
 import { type GetProps } from "@tamagui/core";
 export type BoxProps = GetProps<typeof Box>;
 export declare const Box: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
+    "...size"?: number | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
         bottom?: number;
         left?: number;
         right?: number;
-    } | undefined;
+    } | null | undefined;
     transparent?: boolean | undefined;
-    "...size"?: number | undefined;
+    fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
     hoverTheme?: boolean | undefined;
     pressTheme?: boolean | undefined;
@@ -25,16 +25,16 @@ export declare const Box: import("@tamagui/core").TamaguiComponent<import("@tama
 export { Unspaced } from "@tamagui/core";
 export type XStackProps = GetProps<typeof XStack>;
 export declare const XStack: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    shadow?: "$lg" | "$md" | "$sm" | undefined;
+    shadow?: "$md" | "$lg" | "$sm" | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
         bottom?: number;
         left?: number;
         right?: number;
-    } | undefined;
+    } | null | undefined;
     transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
     hoverTheme?: boolean | undefined;
     pressTheme?: boolean | undefined;
@@ -49,16 +49,16 @@ export declare const XStack: import("@tamagui/core").TamaguiComponent<import("@t
 }, import("@tamagui/core").StaticConfigPublic>;
 export type YStackProps = GetProps<typeof YStack>;
 export declare const YStack: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    shadow?: "$lg" | "$md" | "$sm" | undefined;
+    shadow?: "$md" | "$lg" | "$sm" | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
         bottom?: number;
         left?: number;
         right?: number;
-    } | undefined;
+    } | null | undefined;
     transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
     hoverTheme?: boolean | undefined;
     pressTheme?: boolean | undefined;
@@ -73,16 +73,16 @@ export declare const YStack: import("@tamagui/core").TamaguiComponent<import("@t
 }, import("@tamagui/core").StaticConfigPublic>;
 export type ZStackProps = GetProps<typeof ZStack>;
 export declare const ZStack: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    shadow?: "$lg" | "$md" | "$sm" | undefined;
+    shadow?: "$md" | "$lg" | "$sm" | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
-    fullscreen?: boolean | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
         bottom?: number;
         left?: number;
         right?: number;
-    } | undefined;
+    } | null | undefined;
     transparent?: boolean | undefined;
+    fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
     hoverTheme?: boolean | undefined;
     pressTheme?: boolean | undefined;

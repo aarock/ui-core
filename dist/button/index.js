@@ -5,6 +5,7 @@ const ButtonContext = createStyledContext({
     size: "$md",
     color: "currentColor",
     variant: "default",
+    isReadOnly: false
 });
 const shadowDefaultStyles = {
     shadowColor: "$shadow2",
@@ -42,7 +43,7 @@ export const ButtonFrame = styled(Stack, {
             //     pressStyle: ( props as any ).isReadOnly ? {} : { borderColor: "$primary10", backgroundColor: "$primary10" },
             //     ... ( props as any ).isActive ? { borderColor: "$primary10", backgroundColor: "$primary10" } : {},
             // } ),
-            create: (_, { props }) => (Object.assign({ borderStyle: "dashed", borderColor: "$new7",
+            create: (_, { props }) => (Object.assign({ borderStyle: "dashed", borderColor: "$new7", 
                 // backgroundColor: "$new2",
                 hoverStyle: props.isReadOnly ? {} : { backgroundColor: "$new3" }, pressStyle: props.isReadOnly ? {} : { backgroundColor: "$new4" } }, props.isActive ? { backgroundColor: "$new4" } : {})),
             filter: (_, { props }) => (Object.assign({ borderStyle: "dashed", borderColor: "$neutral7", backgroundColor: "$neutral1", hoverStyle: props.isReadOnly ? {} : { backgroundColor: "$neutral3" }, pressStyle: props.isReadOnly ? {} : { backgroundColor: "$neutral4" } }, props.isActive ? { backgroundColor: "$neutral4" } : {})),

@@ -10,7 +10,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { styled, useProps, useTheme } from '@tamagui/core';
+import { styled, useTheme } from '@tamagui/core';
 import { YStack } from '../box';
 import { LinearGradient as LinearGradientBase } from './linear-gradient';
 const GradientFrame = styled(YStack, {
@@ -18,16 +18,15 @@ const GradientFrame = styled(YStack, {
     overflow: 'hidden',
     position: 'relative',
 });
-export const Gradient = GradientFrame.styleable((propsIn, ref) => {
+export const Gradient = GradientFrame.styleable(props => {
     var _a;
-    const props = useProps(propsIn);
     const { start, end, colors: colorsProp, locations, children } = props, stackProps = __rest(props, ["start", "end", "colors", "locations", "children"]);
     const theme = useTheme();
     let colors = ((_a = props.colors) === null || _a === void 0 ? void 0 : _a.map((c) => {
         var _a, _b;
         return (_b = (_a = theme[c]) === null || _a === void 0 ? void 0 : _a.get('web')) !== null && _b !== void 0 ? _b : c;
     })) || [];
-    return (_jsxs(GradientFrame, Object.assign({ ref: ref }, stackProps, { children: [_jsx(LinearGradientBase
+    return (_jsxs(GradientFrame, Object.assign({}, stackProps, { children: [_jsx(LinearGradientBase
             //@ts-ignore
             , { 
                 //@ts-ignore

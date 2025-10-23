@@ -9,7 +9,7 @@ export declare const ButtonFrame: import("@tamagui/core").TamaguiComponent<impor
 }, import("@tamagui/core").StaticConfigPublic>;
 export type ButtonLabelProps = GetProps<typeof ButtonLabel>;
 export declare const ButtonLabel: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiTextElement, import("@tamagui/core").RNTamaguiTextNonStyleProps, import("@tamagui/core").TextStylePropsBase, {
-    size?: "$lg" | "$md" | "$sm" | undefined;
+    size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "danger" | "filter" | "default" | "option" | "subtle" | "inverse" | "create" | "ghost" | undefined;
 }, import("@tamagui/core").StaticConfigPublic>;
 export type ButtonIconProps = GetProps<typeof ButtonIcon>;
@@ -21,8 +21,8 @@ declare const ButtonIcon: import("@tamagui/core").TamaguiComponent<import("@tama
 } & import("react").RefAttributes<any>, import("@tamagui/core").StackStyleBase & {
     readonly color?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
 }, {
-    size?: "$lg" | "$md" | "$sm" | undefined;
-    variant?: "danger" | "filter" | "default" | "option" | "action" | "subtle" | "inverse" | "create" | "ghost" | undefined;
+    size?: "$md" | "$lg" | "$sm" | undefined;
+    variant?: "danger" | "filter" | "default" | "option" | "subtle" | "action" | "inverse" | "create" | "ghost" | undefined;
 }, {
     readonly accept: {
         readonly color: "color";
@@ -70,7 +70,7 @@ export declare const Button: import("react").ForwardRefExoticComponent<Omit<impo
         isReadOnly?: boolean | undefined;
     }, import("@tamagui/core").StaticConfigPublic>;
     Label: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiTextElement, import("@tamagui/core").RNTamaguiTextNonStyleProps, import("@tamagui/core").TextStylePropsBase, {
-        size?: "$lg" | "$md" | "$sm" | undefined;
+        size?: "$md" | "$lg" | "$sm" | undefined;
         variant?: "danger" | "filter" | "default" | "option" | "subtle" | "inverse" | "create" | "ghost" | undefined;
     }, import("@tamagui/core").StaticConfigPublic>;
     Icon: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, any, import("@tamagui/core").TamaguiComponentPropsBaseBase & {
@@ -81,8 +81,8 @@ export declare const Button: import("react").ForwardRefExoticComponent<Omit<impo
     } & import("react").RefAttributes<any>, import("@tamagui/core").StackStyleBase & {
         readonly color?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
     }, {
-        size?: "$lg" | "$md" | "$sm" | undefined;
-        variant?: "danger" | "filter" | "default" | "option" | "action" | "subtle" | "inverse" | "create" | "ghost" | undefined;
+        size?: "$md" | "$lg" | "$sm" | undefined;
+        variant?: "danger" | "filter" | "default" | "option" | "subtle" | "action" | "inverse" | "create" | "ghost" | undefined;
     }, {
         readonly accept: {
             readonly color: "color";

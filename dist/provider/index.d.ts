@@ -211,8 +211,8 @@ declare const tg: import("@tamagui/core").TamaguiInternalConfig<{
                 normal: string;
             };
         };
-    }, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
-    body: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+    }, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+    body: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
     mono: {
         weight: {
             1: string;
@@ -236,8 +236,8 @@ declare const tg: import("@tamagui/core").TamaguiInternalConfig<{
             16: number;
         };
     };
-    silkscreen: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
-}, boolean | undefined, {
+    silkscreen: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
+}, {
     allowedStyleValues: false;
     autocompleteSpecificTokens: "except-special";
 }>;
@@ -428,7 +428,7 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
     medium: string;
     slow: string;
 }, {
-    body: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+    body: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
     heading: import("@tamagui/core").FillInFont<{
         size: {
             5: number;
@@ -470,7 +470,7 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
                 normal: string;
             };
         };
-    }, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+    }, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
     mono: {
         weight: {
             1: string;
@@ -494,8 +494,8 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
             16: number;
         };
     };
-    silkscreen: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
-}, boolean, {
+    silkscreen: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
+}, {
     allowedStyleValues: false;
     autocompleteSpecificTokens: "except-special";
 } & Omit<import("@tamagui/core").GenericTamaguiSettings, keyof {

@@ -7,5 +7,5 @@ export declare const Blur: import("@tamagui/core").TamaguiComponent<import("@tam
     blurReductionFactor?: number;
     experimentalBlurMethod?: import("expo-blur").ExperimentalBlurMethod;
 } & import("react-native").ViewProps, import("@tamagui/core").StackStyleBase, {
-    variant?: "none" | "strong" | "subtle" | undefined;
+    variant?: "none" | "subtle" | "strong" | undefined;
 }, import("@tamagui/core").StaticConfigPublic>;

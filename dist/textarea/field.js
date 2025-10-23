@@ -60,10 +60,10 @@ const TextAreaFieldBase = styled(Text, {
     accept: { placeholderColor: 'color' },
     defaultProps: { placeholder: '', resize: 'vertical' },
 });
-export const TextAreaField = TextAreaFieldBase.styleable((_a, ref) => {
+export const TextAreaField = TextAreaFieldBase.styleable((_a) => {
     var { onChange } = _a, props = __rest(_a, ["onChange"]);
     const { value, onValueChange } = useContext(Context);
-    return _jsx(TextAreaFieldBase, Object.assign({ ref: ref, value: value, 
+    return _jsx(TextAreaFieldBase, Object.assign({ value: value, 
         //@ts-ignore
         onChange: event => {
             const value = event.target.value;

@@ -10,8 +10,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import { useContext } from 'react';
-import { styled, Text } from '@tamagui/core';
+import { useContext } from "react";
+import { styled, Text } from "@tamagui/core";
 import { Context, StyledContext } from "./context";
 const InputFieldBase = styled(Text, {
     tag: "input",
@@ -24,14 +24,14 @@ const InputFieldBase = styled(Text, {
     variants: {
         variant: {
             default: {
-                color: '$neutral12',
-                hoverStyle: { color: '$neutral12' },
-                focusStyle: { color: '$neutral12' },
+                color: "$neutral12",
+                hoverStyle: { color: "$neutral12" },
+                focusStyle: { color: "$neutral12" },
             },
             mute: {
-                color: '$neutral8',
-                hoverStyle: { color: '$neutral8' },
-                focusStyle: { color: '$neutral8' },
+                color: "$neutral8",
+                hoverStyle: { color: "$neutral8" },
+                focusStyle: { color: "$neutral8" },
             },
         },
         size: {
@@ -55,15 +55,15 @@ const InputFieldBase = styled(Text, {
             // } )
         }
     },
-    defaultVariants: { variant: 'default' }
+    defaultVariants: { variant: "default" }
 }, {
-    accept: { placeholderColor: 'color' },
-    defaultProps: { placeholder: '' },
+    accept: { placeholderColor: "color" },
+    defaultProps: { placeholder: "" },
 });
-export const InputField = InputFieldBase.styleable((_a, ref) => {
+export const InputField = InputFieldBase.styleable((_a) => {
     var { onChange } = _a, props = __rest(_a, ["onChange"]);
     const { value, onValueChange } = useContext(Context);
-    return _jsx(InputFieldBase, Object.assign({ ref: ref, value: value, 
+    return _jsx(InputFieldBase, Object.assign({ value: value, 
         //@ts-ignore
         onChange: event => {
             const value = event.target.value;

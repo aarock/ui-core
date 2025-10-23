@@ -1,10 +1,10 @@
-import { ChangeEvent } from 'react';
-import { type GetProps } from '@tamagui/core';
+import { ChangeEvent } from "react";
+import { type GetProps } from "@tamagui/core";
 export type InputFieldProps = GetProps<typeof InputFieldBase>;
 declare const InputFieldBase: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiTextElement, import("@tamagui/core").RNTamaguiTextNonStyleProps, import("@tamagui/core").TextStylePropsBase & {
     readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
 }, {
-    size?: "$lg" | "$md" | "$sm" | undefined;
+    size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
 }, {
     readonly accept: {
@@ -17,7 +17,7 @@ declare const InputFieldBase: import("@tamagui/core").TamaguiComponent<import("@
 export declare const InputField: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiTextNonStyleProps, import("@tamagui/core").TextStylePropsBase & {
     readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
 }, {
-    size?: "$lg" | "$md" | "$sm" | undefined;
+    size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
 }>, "value" | "onChange"> & {
     value?: string;
@@ -28,7 +28,7 @@ export declare const InputField: import("@tamagui/core").TamaguiComponent<Omit<i
 }, import("@tamagui/core").TextStylePropsBase & {
     readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
 }, {
-    size?: "$lg" | "$md" | "$sm" | undefined;
+    size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
 }, {
     readonly accept: {

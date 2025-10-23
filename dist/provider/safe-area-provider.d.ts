@@ -1,6 +1,4 @@
-export declare const SafeAreaProvider: import("react").ExoticComponent<{
-    children?: import("react").ReactNode | undefined;
-}>;
+export declare const SafeAreaProvider: import("react").ExoticComponent<import("react").FragmentProps>;
 export interface EdgeInsets {
     top: number;
     right: number;

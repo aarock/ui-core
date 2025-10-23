@@ -401,12 +401,12 @@ export declare const baseConfig: {
         radius: {
             0: import("@tamagui/web").Variable<number>;
             2: import("@tamagui/web").Variable<number>;
-            3: import("@tamagui/web").Variable<number>;
             1: import("@tamagui/web").Variable<number>;
             4: import("@tamagui/web").Variable<number>;
             8: import("@tamagui/web").Variable<number>;
             true: import("@tamagui/web").Variable<number>;
             12: import("@tamagui/web").Variable<number>;
+            3: import("@tamagui/web").Variable<number>;
             5: import("@tamagui/web").Variable<number>;
             7: import("@tamagui/web").Variable<number>;
             9: import("@tamagui/web").Variable<number>;
@@ -620,12 +620,12 @@ export declare const baseConfig: {
         radius: {
             0: import("@tamagui/web").Variable<number>;
             2: import("@tamagui/web").Variable<number>;
-            3: import("@tamagui/web").Variable<number>;
             1: import("@tamagui/web").Variable<number>;
             4: import("@tamagui/web").Variable<number>;
             8: import("@tamagui/web").Variable<number>;
             true: import("@tamagui/web").Variable<number>;
             12: import("@tamagui/web").Variable<number>;
+            3: import("@tamagui/web").Variable<number>;
             5: import("@tamagui/web").Variable<number>;
             7: import("@tamagui/web").Variable<number>;
             9: import("@tamagui/web").Variable<number>;
@@ -774,8 +774,8 @@ export declare const baseConfig: {
                     normal: string;
                 };
             };
-        }, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
-        body: import("@tamagui/web").FillInFont<import("@tamagui/web").GenericFont, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+        }, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+        body: import("@tamagui/web").FillInFont<import("@tamagui/web").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
         mono: {
             weight: {
                 1: string;
@@ -799,7 +799,7 @@ export declare const baseConfig: {
                 16: number;
             };
         };
-        silkscreen: import("@tamagui/web").FillInFont<import("@tamagui/web").GenericFont, 1 | 13 | 15 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
+        silkscreen: import("@tamagui/web").FillInFont<import("@tamagui/web").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
     };
     mediaQueryDefaultActive: {
         xl: boolean;
