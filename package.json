@@ -2,6 +2,7 @@
   "name": "@aarock/ui-core",
   "version": "1.0.5",
   "author": "Aaron Gale",
+  "repository": "https://github.com/aarock/ui-core",
   "license": "ISC",
   "type": "module",
   "main": "./dist/index.js",
