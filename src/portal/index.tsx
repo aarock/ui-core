@@ -7,5 +7,5 @@ export const Portal = styled( PortalBase, {
     position: "absolute",
     display: "flex",
     flexGrow: 1,
-    zIndex: 100,
+    stackZIndex: true,
 } as const )

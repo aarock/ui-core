@@ -10,6 +10,7 @@ import {
     SortableContext,
     verticalListSortingStrategy,
 } from '@dnd-kit/sortable'
+
 import { UniqueIdentifier } from '@dnd-kit/core'
 import { YStack } from '@tamagui/stacks'
 
@@ -31,7 +32,7 @@ export function Sort<T> ( {
     onValueChange,
     renderItem,
     renderEmpty,
-    getKey = v => ( v as any ).id ?? ( v as any ).key ?? JSON.stringify( v ),
+    getKey = v => ( v as any )?.id || ( v as any )?.key || JSON.stringify( v ),
     ...rest
 }: SortProps<T> ) {
 
@@ -47,10 +48,11 @@ export function Sort<T> ( {
     </YStack>
 
     function handleDragEnd ( { active, over } ) {
-        if ( active.id !== over.id ) {
-            const fromIndex = (value||[]).findIndex( item => active.id === getKey( item ) )
-            const toIndex = (value||[]).findIndex( item => over.id === getKey( item ) )
+        if ( active?.id !== over?.id ) {
+            const fromIndex = (value||[]).findIndex( item => active?.id === getKey( item ) )
+            const toIndex = (value||[]).findIndex( item => over?.id === getKey( item ) )
             const newArray = arrayMove( (value||[]), fromIndex, toIndex )
+            console.log( value, newArray )
             onValueChange?.( newArray )
         }
     }

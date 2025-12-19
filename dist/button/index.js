@@ -88,6 +88,7 @@ export const ButtonLabel = styled(Text, {
     flexShrink: 0,
     textDecorationColor: "transparent",
     textDecorationLine: "none",
+    color: "black",
     variants: {
         variant: {
             default: (_, { props }) => ({
@@ -139,6 +140,7 @@ const ButtonIcon = styled(Icon, {
     pointerEvents: "none",
     display: "flex",
     flexShrink: 0,
+    color: "black",
     variants: {
         variant: {
             default: (_, { props }) => ({

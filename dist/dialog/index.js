@@ -37,11 +37,11 @@ function DialogFrame({ isOpen: controlledIsOpen, onOpenChange, render, children 
     const headingId = useId();
     const descriptionId = useId();
     return _jsxs(FloatingPortal, { children: [_jsx(AnimatePresence, { children: isOpen &&
-                    _jsx(Blur, { fullscreen: true, animation: "slow", variant: "subtle", enterStyle: { opacity: 0 }, exitStyle: { opacity: 0 }, onPress: () => setOpen(false) }) }), _jsx(AnimatePresence, { children: isOpen &&
-                    _jsx(FloatingOverlay, { className: "Dialog-overlay", lockScroll: true, children: _jsx(FloatingFocusManager, { context: context, children: _jsxs(Box, Object.assign({ fullscreen: true, animation: "medium", enterStyle: { opacity: 0, y: -4, scale: 1.02 }, exitStyle: { opacity: 0, y: -4, scale: 1.02 }, alignItems: "center", justifyContent: "center", ref: refs.setFloating, "aria-labelledby": headingId, "aria-describedby": descriptionId }, getFloatingProps(), { children: [render === null || render === void 0 ? void 0 : render(getReferenceProps, setOpen), children] })) }) }) })] });
+                    _jsx(Blur, { fullscreen: true, animation: "slow", variant: "subtle", enterStyle: { opacity: 0 }, exitStyle: { opacity: 0 }, onPress: () => setOpen(false), zIndex: 100 }) }), _jsx(AnimatePresence, { children: isOpen &&
+                    _jsx(FloatingOverlay, { className: "Dialog-overlay", lockScroll: true, style: { zIndex: 200 }, children: _jsx(FloatingFocusManager, { context: context, children: _jsxs(Box, Object.assign({ fullscreen: true, animation: "medium", enterStyle: { opacity: 0, y: -4, scale: 1.02 }, exitStyle: { opacity: 0, y: -4, scale: 1.02 }, alignItems: "center", justifyContent: "center", ref: refs.setFloating, "aria-labelledby": headingId, "aria-describedby": descriptionId }, getFloatingProps(), { children: [render === null || render === void 0 ? void 0 : render(getReferenceProps, setOpen), children] })) }) }) })] });
 }
 function DialogContent(props) {
-    return _jsx(YStack, Object.assign({ variant: "card", p: "$lg", gap: "$lg", shadow: "$lg", minWidth: 200, maxWidth: 400 }, props));
+    return _jsx(YStack, Object.assign({ variant: "card", p: "$lg", gap: "$lg", shadow: "$lg", minWidth: 200, maxWidth: 400, pos: "relative", zIndex: 2000 }, props));
 }
 function DialogHeader(_a) {
     var { icon, color, label } = _a, props = __rest(_a, ["icon", "color", "label"]);

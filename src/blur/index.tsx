@@ -5,8 +5,9 @@ export type BlurProps = GetProps<typeof Blur>
 export const Blur = styled( YStack, {
     name: 'Blur',
     display: "flex",
-    flexGrow: 1,
+    position: "relative",
     backdropFilter: "blur(4px)",
+    flexGrow: 1,
     style: { WebkitBackdropFilter: "blur(4px)" },
     variants: {
         variant: {

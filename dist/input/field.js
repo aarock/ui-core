@@ -17,6 +17,7 @@ const InputFieldBase = styled(Text, {
     tag: "input",
     context: StyledContext,
     flex: 1,
+    minWidth: 0,
     borderWidth: 0,
     outlineWidth: 0,
     outlineStyle: "none",

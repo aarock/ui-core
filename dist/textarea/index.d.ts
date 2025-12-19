@@ -61,9 +61,9 @@ export declare const TextArea: import("react").ForwardRefExoticComponent<Omit<im
     Field: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiTextNonStyleProps, import("@tamagui/core").TextStylePropsBase & {
         readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
     }, {
-        size?: "$md" | "$lg" | "$sm" | undefined;
+        size?: "$lg" | "$md" | "$sm" | undefined;
         variant?: "default" | "mute" | undefined;
-    }>, "value" | "onChange"> & {
+    }>, "onChange" | "value"> & {
         value?: string;
         onChange?: (value: import("react").ChangeEvent<HTMLTextAreaElement>) => void;
     }, import("@tamagui/core").TamaguiTextElement, import("@tamagui/core").RNTamaguiTextNonStyleProps & {
@@ -72,7 +72,7 @@ export declare const TextArea: import("react").ForwardRefExoticComponent<Omit<im
     }, import("@tamagui/core").TextStylePropsBase & {
         readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
     }, {
-        size?: "$md" | "$lg" | "$sm" | undefined;
+        size?: "$lg" | "$md" | "$sm" | undefined;
         variant?: "default" | "mute" | undefined;
     }, {
         readonly accept: {

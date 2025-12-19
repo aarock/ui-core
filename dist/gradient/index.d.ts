@@ -7,7 +7,8 @@ export type GradientExtraProps = {
     end?: LinearGradientPoint | null;
 };
 export declare const Gradient: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    shadow?: "$md" | "$lg" | "$sm" | undefined;
+    shadow?: "$lg" | "$md" | "$sm" | undefined;
+    variant?: "card" | "well" | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
@@ -27,9 +28,9 @@ export declare const Gradient: import("@tamagui/core").TamaguiComponent<Omit<imp
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    variant?: "card" | "well" | undefined;
 }>, keyof GradientExtraProps> & GradientExtraProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & GradientExtraProps, import("@tamagui/core").StackStyleBase, {
-    shadow?: "$md" | "$lg" | "$sm" | undefined;
+    shadow?: "$lg" | "$md" | "$sm" | undefined;
+    variant?: "card" | "well" | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
@@ -49,6 +50,5 @@ export declare const Gradient: import("@tamagui/core").TamaguiComponent<Omit<imp
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    variant?: "card" | "well" | undefined;
 }, import("@tamagui/core").StaticConfigPublic>;
 export type LinearGradientProps = GetProps<typeof Gradient>;

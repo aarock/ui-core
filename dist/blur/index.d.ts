@@ -1,7 +1,8 @@
 import { GetProps } from "@tamagui/core";
 export type BlurProps = GetProps<typeof Blur>;
 export declare const Blur: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    shadow?: "$md" | "$lg" | "$sm" | undefined;
+    shadow?: "$lg" | "$md" | "$sm" | undefined;
+    variant?: "none" | "card" | "well" | "subtle" | "strong" | undefined;
     elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     inset?: number | import("@tamagui/core").SizeTokens | {
         top?: number;
@@ -21,5 +22,4 @@ export declare const Blur: import("@tamagui/core").TamaguiComponent<import("@tam
     radiused?: boolean | undefined;
     padded?: boolean | undefined;
     chromeless?: boolean | "all" | undefined;
-    variant?: "none" | "card" | "well" | "subtle" | "strong" | undefined;
 }, import("@tamagui/core").StaticConfigPublic>;
