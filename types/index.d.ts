@@ -19,6 +19,7 @@ export * from "./button";
 export * from "./input";
 export * from "./textarea";
 export * from "./use-measure";
+export * from "./use-keys";
 export * from "./animation";
 export * from "./provider";
 export * from "./gradient";

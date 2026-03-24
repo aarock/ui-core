@@ -25,12 +25,13 @@ export type FloatingProps = Omit<BoxProps, "asChild"> & {
     shouldResize?: boolean;
     shouldScroll?: boolean;
     shouldMatchWidth?: boolean;
+    minWidth?: number;
 };
 export type FloatingActions = {
     setOpen: (isOpen: boolean) => void;
     toggleOpen: () => void;
 };
-declare function Root({ actions, role: r, strategy, placement, triggerOffset, edgeOffset, delay, className, children, isOpen: isControlledOpen, isClickable, isFocusable, isHoverable, isDismissable, isSameScroll, isInline, isFullscreen, shouldOffset, shouldFlip, shouldShift, shouldResize, shouldScroll, shouldMatchWidth, ...props }: FloatingProps): import("react/jsx-runtime").JSX.Element;
+declare function Root({ actions, role: r, strategy, placement, triggerOffset, edgeOffset, delay, className, children, isOpen: isControlledOpen, isClickable, isFocusable, isHoverable, isDismissable, isSameScroll, isInline, isFullscreen, shouldOffset, shouldFlip, shouldShift, shouldResize, shouldScroll, shouldMatchWidth, minWidth, ...props }: FloatingProps): import("react/jsx-runtime").JSX.Element;
 export type FloatingTriggerProps = BoxProps;
 declare function FloatingTrigger({ children, asChild, ...rest }: FloatingTriggerProps): import("react/jsx-runtime").JSX.Element;
 export type FloatingOverlayProps = BoxProps & {

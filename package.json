@@ -62,6 +62,7 @@
     "react-native-reanimated": ">=3.14"
   },
   "devDependencies": {
+    "typescript": "^5",
     "@tamagui/build": "^1.144",
     "@types/react": "^19.2",
     "@types/react-dom": "^19.2",
