@@ -2,11 +2,11 @@ import { Slot } from "@tamagui/core"
 import { ReactNode, useState } from 'react'
 import { CSS } from '@dnd-kit/utilities'
 import { useSortable } from '@dnd-kit/sortable'
+import { useKeys } from "../use-keys"
 import { Box, BoxProps, type YStackProps } from '../box'
 import { DndProvider } from '../dnd'
 
 import {
-    arrayMove,
     SortableContext,
     verticalListSortingStrategy,
 } from '@dnd-kit/sortable'
@@ -36,24 +36,36 @@ export function Sort<T> ( {
     ...rest
 }: SortProps<T> ) {
 
+    const [ keys, swap ] = useKeys()
+
     return <YStack { ...rest }>
         <DndProvider onDragEnd={ handleDragEnd }>
-            <SortableContext
-                items={ (value||[])?.map?.( v => getKey( v ) ) }
-                strategy={ verticalListSortingStrategy }
-            >{ (value||[])?.map( ( item, index ) => (
-                <Sortable key={ getKey( item ) } id={ getKey( item ) } render={ options => renderItem?.( item, options, index ) } />
-            ) ) }{ !(value||[])?.length && renderEmpty?.() }</SortableContext>
+            <SortableContext items={ keys } strategy={ verticalListSortingStrategy }>
+                { ( value || [] )?.map( ( item, index ) => (
+                    <Sortable
+                        id={ keys[ index ] }
+                        key={ keys[ index ] }
+                        render={ options => renderItem?.( item, options, index ) }
+                    />
+                ) ) }{ !( value || [] )?.length && renderEmpty?.() }</SortableContext>
         </DndProvider>
     </YStack>
 
     function handleDragEnd ( { active, over } ) {
+
         if ( active?.id !== over?.id ) {
-            const fromIndex = (value||[]).findIndex( item => active?.id === getKey( item ) )
-            const toIndex = (value||[]).findIndex( item => over?.id === getKey( item ) )
-            const newArray = arrayMove( (value||[]), fromIndex, toIndex )
-            console.log( value, newArray )
-            onValueChange?.( newArray )
+
+            const fromIndex = keys.indexOf( active?.id )
+            const toIndex = keys.indexOf( over?.id )
+
+            if ( fromIndex === -1 ) return
+            if ( toIndex === -1 ) return
+            if ( fromIndex === toIndex ) return
+
+            const result = reorder( ( value || [] ), fromIndex, toIndex )
+            swap( fromIndex, toIndex )
+            onValueChange?.( result )
+
         }
     }
 
@@ -105,4 +117,15 @@ function Sortable<T> ( { id, render, ...rest }: SortableProps<T> ) {
             <Slot children={ render?.( { isDragging, props: handleProps } ) || <></> } { ...rest } />
         </Box>
     )
+}
+
+function reorder<T = unknown> (
+    list: T[],
+    fromIndex: number,
+    toIndex: number
+): T[] {
+    const result = [ ...list ]
+    const [ removed ] = result.splice( fromIndex, 1 )
+    result.splice( toIndex, 0, removed )
+    return result
 }

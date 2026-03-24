@@ -23,6 +23,7 @@ export * from "./button"
 export * from "./input"
 export * from "./textarea"
 export * from "./use-measure"
+export * from "./use-keys"
 // COMPOSITION //
 export * from "./animation"
 export * from "./provider"

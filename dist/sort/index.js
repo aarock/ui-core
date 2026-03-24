@@ -14,21 +14,29 @@ import { Slot } from "@tamagui/core";
 import { useState } from 'react';
 import { CSS } from '@dnd-kit/utilities';
 import { useSortable } from '@dnd-kit/sortable';
+import { useKeys } from "../use-keys";
 import { Box } from '../box';
 import { DndProvider } from '../dnd';
-import { arrayMove, SortableContext, verticalListSortingStrategy, } from '@dnd-kit/sortable';
+import { SortableContext, verticalListSortingStrategy, } from '@dnd-kit/sortable';
 import { YStack } from '@tamagui/stacks';
 export function Sort(_a) {
-    var _b, _c, _d, _e;
+    var _b, _c;
     var { value = [], onValueChange, renderItem, renderEmpty, getKey = v => (v === null || v === void 0 ? void 0 : v.id) || (v === null || v === void 0 ? void 0 : v.key) || JSON.stringify(v) } = _a, rest = __rest(_a, ["value", "onValueChange", "renderItem", "renderEmpty", "getKey"]);
-    return _jsx(YStack, Object.assign({}, rest, { children: _jsx(DndProvider, { onDragEnd: handleDragEnd, children: _jsxs(SortableContext, { items: (_c = (_b = (value || [])) === null || _b === void 0 ? void 0 : _b.map) === null || _c === void 0 ? void 0 : _c.call(_b, v => getKey(v)), strategy: verticalListSortingStrategy, children: [(_d = (value || [])) === null || _d === void 0 ? void 0 : _d.map((item, index) => (_jsx(Sortable, { id: getKey(item), render: options => renderItem === null || renderItem === void 0 ? void 0 : renderItem(item, options, index) }, getKey(item)))), !((_e = (value || [])) === null || _e === void 0 ? void 0 : _e.length) && (renderEmpty === null || renderEmpty === void 0 ? void 0 : renderEmpty())] }) }) }));
+    const [keys, swap] = useKeys();
+    return _jsx(YStack, Object.assign({}, rest, { children: _jsx(DndProvider, { onDragEnd: handleDragEnd, children: _jsxs(SortableContext, { items: keys, strategy: verticalListSortingStrategy, children: [(_b = (value || [])) === null || _b === void 0 ? void 0 : _b.map((item, index) => (_jsx(Sortable, { id: keys[index], render: options => renderItem === null || renderItem === void 0 ? void 0 : renderItem(item, options, index) }, keys[index]))), !((_c = (value || [])) === null || _c === void 0 ? void 0 : _c.length) && (renderEmpty === null || renderEmpty === void 0 ? void 0 : renderEmpty())] }) }) }));
     function handleDragEnd({ active, over }) {
         if ((active === null || active === void 0 ? void 0 : active.id) !== (over === null || over === void 0 ? void 0 : over.id)) {
-            const fromIndex = (value || []).findIndex(item => (active === null || active === void 0 ? void 0 : active.id) === getKey(item));
-            const toIndex = (value || []).findIndex(item => (over === null || over === void 0 ? void 0 : over.id) === getKey(item));
-            const newArray = arrayMove((value || []), fromIndex, toIndex);
-            console.log(value, newArray);
-            onValueChange === null || onValueChange === void 0 ? void 0 : onValueChange(newArray);
+            const fromIndex = keys.indexOf(active === null || active === void 0 ? void 0 : active.id);
+            const toIndex = keys.indexOf(over === null || over === void 0 ? void 0 : over.id);
+            if (fromIndex === -1)
+                return;
+            if (toIndex === -1)
+                return;
+            if (fromIndex === toIndex)
+                return;
+            const result = reorder((value || []), fromIndex, toIndex);
+            swap(fromIndex, toIndex);
+            onValueChange === null || onValueChange === void 0 ? void 0 : onValueChange(result);
         }
     }
 }
@@ -49,5 +57,11 @@ function Sortable(_a) {
             setActivatorNodeRef(ref);
         } });
     return (_jsx(Box, Object.assign({}, parentProps, { children: _jsx(Slot, Object.assign({ children: (render === null || render === void 0 ? void 0 : render({ isDragging, props: handleProps })) || _jsx(_Fragment, {}) }, rest)) })));
+}
+function reorder(list, fromIndex, toIndex) {
+    const result = [...list];
+    const [removed] = result.splice(fromIndex, 1);
+    result.splice(toIndex, 0, removed);
+    return result;
 }
 //# sourceMappingURL=index.js.map

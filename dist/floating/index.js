@@ -17,7 +17,7 @@ import { useFloating, useInteractions, useClick, useHover, useFocus, flip, shift
 import { Portal } from "@tamagui/portal";
 const Context = createContext({});
 function Root(_a) {
-    var { actions, role: r, strategy = "absolute", placement = "bottom-start", triggerOffset = 0, edgeOffset = 16, delay = 100, className, children, isOpen: isControlledOpen, isClickable = false, isFocusable = false, isHoverable = false, isDismissable = true, isSameScroll = false, isInline = false, isFullscreen = false, shouldOffset = true, shouldFlip = true, shouldShift = true, shouldResize = true, shouldScroll = false, shouldMatchWidth = false } = _a, props = __rest(_a, ["actions", "role", "strategy", "placement", "triggerOffset", "edgeOffset", "delay", "className", "children", "isOpen", "isClickable", "isFocusable", "isHoverable", "isDismissable", "isSameScroll", "isInline", "isFullscreen", "shouldOffset", "shouldFlip", "shouldShift", "shouldResize", "shouldScroll", "shouldMatchWidth"]);
+    var { actions, role: r, strategy = "absolute", placement = "bottom-start", triggerOffset = 0, edgeOffset = 16, delay = 100, className, children, isOpen: isControlledOpen, isClickable = false, isFocusable = false, isHoverable = false, isDismissable = true, isSameScroll = false, isInline = false, isFullscreen = false, shouldOffset = true, shouldFlip = true, shouldShift = true, shouldResize = true, shouldScroll = false, shouldMatchWidth = false, minWidth } = _a, props = __rest(_a, ["actions", "role", "strategy", "placement", "triggerOffset", "edgeOffset", "delay", "className", "children", "isOpen", "isClickable", "isFocusable", "isHoverable", "isDismissable", "isSameScroll", "isInline", "isFullscreen", "shouldOffset", "shouldFlip", "shouldShift", "shouldResize", "shouldScroll", "shouldMatchWidth", "minWidth"]);
     const [isOpen, setOpen] = useState(false);
     const { context, refs, floatingStyles } = useFloating({
         open: isOpen,
@@ -33,7 +33,7 @@ function Root(_a) {
                 apply(_a) {
                     var { availableWidth, availableHeight, elements, rects } = _a, rest = __rest(_a, ["availableWidth", "availableHeight", "elements", "rects"]);
                     // console.log( rest, rects.reference.width )
-                    Object.assign(elements.floating.style, Object.assign(Object.assign(Object.assign({}, shouldMatchWidth && { minWidth: `${rects.reference.width}px` }), shouldScroll && { overflow: "auto" }), { maxWidth: `${availableWidth}px`, maxHeight: `${availableHeight}px` }));
+                    Object.assign(elements.floating.style, Object.assign(Object.assign(Object.assign(Object.assign({}, shouldMatchWidth && { minWidth: `${rects.reference.width}px` }), minWidth && { minWidth: `${minWidth}px` }), shouldScroll && { overflow: "auto" }), { maxWidth: `${availableWidth}px`, maxHeight: `${availableHeight}px` }));
                 }
             }),
         ],

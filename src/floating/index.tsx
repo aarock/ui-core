@@ -43,6 +43,7 @@ export type FloatingProps = Omit<BoxProps, "asChild"> & {
   shouldResize?: boolean,
   shouldScroll?: boolean,
   shouldMatchWidth?: boolean,
+  minWidth?: number,
 }
 
 export type FloatingActions = {
@@ -76,6 +77,7 @@ function Root ( {
   shouldResize = true,
   shouldScroll = false,
   shouldMatchWidth = false,
+  minWidth,
   ...props
 }: FloatingProps ) {
 
@@ -96,6 +98,7 @@ function Root ( {
           // console.log( rest, rects.reference.width )
           Object.assign( elements.floating.style, {
             ...shouldMatchWidth && { minWidth: `${ rects.reference.width }px` },
+            ...minWidth && { minWidth: `${ minWidth }px` },
             ...shouldScroll && { overflow: "auto" },
             maxWidth: `${ availableWidth }px`,
             maxHeight: `${ availableHeight }px`,
