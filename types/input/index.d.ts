@@ -43,7 +43,7 @@ export declare const Input: import("react").ForwardRefExoticComponent<Omit<impor
     }, {
         size?: "$md" | "$lg" | "$sm" | undefined;
         variant?: "default" | "mute" | undefined;
-    }, {
+    }, import("@tamagui/core").StaticConfigPublic & {
         readonly accept: {
             readonly placeholderColor: "color";
         };

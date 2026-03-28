@@ -4,6 +4,8 @@ export type ContextProps = {
     onChange?: (event: any) => void;
     onValueChange?: (value: string) => void;
     isReadOnly?: boolean;
+    size?: SizeTokens;
+    variant?: string;
 };
 export declare const Context: import("react").Context<ContextProps>;
 export declare const StyledContext: import("@tamagui/core").StyledContext<{

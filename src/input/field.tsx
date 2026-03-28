@@ -1,5 +1,6 @@
 import { ChangeEvent, useContext } from "react"
-import { styled, type GetProps, Text } from "@tamagui/core"
+import { styled, type GetProps } from "@tamagui/core"
+import { Text } from "../text"
 import { Context, StyledContext } from "./context"
 
 export type InputFieldProps = GetProps<typeof InputFieldBase>

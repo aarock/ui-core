@@ -6,7 +6,7 @@ declare const InputFieldBase: import("@tamagui/core").TamaguiComponent<import("@
 }, {
     size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
-}, {
+}, import("@tamagui/core").StaticConfigPublic & {
     readonly accept: {
         readonly placeholderColor: "color";
     };
@@ -30,7 +30,7 @@ export declare const InputField: import("@tamagui/core").TamaguiComponent<Omit<i
 }, {
     size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
-}, {
+}, import("@tamagui/core").StaticConfigPublic & {
     readonly accept: {
         readonly placeholderColor: "color";
     };

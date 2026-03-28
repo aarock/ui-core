@@ -6,6 +6,8 @@ export type ContextProps = {
     onChange?: ( event: any ) => void
     onValueChange?: ( value: string ) => void
     isReadOnly?: boolean
+    size?: SizeTokens
+    variant?: string
 }
 
 export const Context = createContext<ContextProps>( {

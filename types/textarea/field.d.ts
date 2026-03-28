@@ -6,7 +6,7 @@ declare const TextAreaFieldBase: import("@tamagui/core").TamaguiComponent<import
 }, {
     size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
-}, {
+}, import("@tamagui/core").StaticConfigPublic & {
     readonly accept: {
         readonly placeholderColor: "color";
     };
@@ -31,7 +31,7 @@ export declare const TextAreaField: import("@tamagui/core").TamaguiComponent<Omi
 }, {
     size?: "$md" | "$lg" | "$sm" | undefined;
     variant?: "default" | "mute" | undefined;
-}, {
+}, import("@tamagui/core").StaticConfigPublic & {
     readonly accept: {
         readonly placeholderColor: "color";
     };

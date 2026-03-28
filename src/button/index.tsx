@@ -1,4 +1,5 @@
-import { Text, styled, withStaticProperties, createStyledContext, type GetProps, type SizeTokens, View } from "@tamagui/core"
+import { styled, withStaticProperties, createStyledContext, type GetProps, type SizeTokens, View } from "@tamagui/core"
+import { Text } from "../text"
 import { Spacer } from "../spacer"
 import { Icon } from "../icon"
 
@@ -148,6 +149,7 @@ export const ButtonLabel = styled( Text, {
     textDecorationColor: "transparent",
     textDecorationLine: "none",
     color: "black",
+    fontFamily: "$body",
     variants: {
         variant: {
             default: ( _, { props } ) => ( {

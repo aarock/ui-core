@@ -47,7 +47,7 @@ export declare const TextArea: import("react").ForwardRefExoticComponent<Omit<im
     }, {
         size?: "$md" | "$lg" | "$sm" | undefined;
         variant?: "default" | "mute" | undefined;
-    }, {
+    }, import("@tamagui/core").StaticConfigPublic & {
         readonly accept: {
             readonly placeholderColor: "color";
         };
