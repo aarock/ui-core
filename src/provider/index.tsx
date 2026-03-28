@@ -34,7 +34,8 @@ export function getIcon ( name: string ): ElementType {
 }
 
 export function getFont ( name: string ) {
-    return defaultConfig?.fonts?.[ name ]?.family || "Helvetica"
+    return defaultConfig?.fonts?.[ name ]?.family ||
+        "Helvetica"
 }
 
 export function UIProvider ( {
