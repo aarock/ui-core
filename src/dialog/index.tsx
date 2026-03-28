@@ -56,7 +56,7 @@ function DialogFrame ( {
   return <FloatingPortal>
     <AnimatePresence>{ isOpen &&
       <Blur
-        { ...{ fullscreen: true, animation: "slow", variant: "subtle" } as any }
+        { ...{ fullscreen: true, transition: "slow", variant: "subtle" } as any }
         enterStyle={ { opacity: 0 } }
         exitStyle={ { opacity: 0 } }
         onPress={ () => setOpen( false ) }
@@ -69,7 +69,7 @@ function DialogFrame ( {
           <Box
             position="absolute" top={ 0 } left={ 0 } right={ 0 } bottom={ 0 }
 
-            animation="medium"
+            transition="medium"
             enterStyle={ { opacity: 0, y: -4, scale: 1.02 } }
             exitStyle={ { opacity: 0, y: -4, scale: 1.02 } }
 

@@ -44,9 +44,6 @@ const InputFieldBase = styled( Text, {
                 fontSize: 20,
                 minHeight: 20 + 2 * 8,
             },
-            // "...size": ( size, { tokens } ) => ( {
-            //     minHeight: ( tokens?.size[ size ].val || 0 ) + ( tokens?.space[ size ].val || 0 ),
-            // } )
         }
     },
     defaultVariants: { variant: "default" }
@@ -57,24 +54,21 @@ const InputFieldBase = styled( Text, {
 
 export const InputField = InputFieldBase.styleable<{
     value?: string,
-    onChange?: ( value: ChangeEvent<HTMLInputElement> ) => void
+    onChange?: ( event: ChangeEvent<HTMLInputElement> ) => void
 }>( ( { onChange, ...props } ) => {
 
     const { value, onValueChange, isReadOnly } = useContext( Context )
 
     return <InputFieldBase
         value={ value }
-        //@ts-ignore
-        readOnly={ isReadOnly }
-        //@ts-ignore
-        onChange={ event => {
-            if ( isReadOnly ) return
-            //@ts-ignore
-            const value = event.target.value
-            //@ts-ignore
-            onChange?.( event )
-            onValueChange?.( value )
-        } }
+        { ...{
+            readOnly: isReadOnly,
+            onChange: ( event: ChangeEvent<HTMLInputElement> ) => {
+                if ( isReadOnly ) return
+                onChange?.( event )
+                onValueChange?.( event.target.value )
+            }
+        } as any }
         { ...props }
     />
 

@@ -1,97 +1,61 @@
-import { createInterFont } from '@tamagui/font-inter'
-import { createSilkscreenFont } from '@tamagui/font-silkscreen'
-import { createGenericFont } from './create-generic-font'
+import { createFont, isWeb } from '@tamagui/core'
 
-const silkscreenFont = createSilkscreenFont()
+const family = isWeb
+    ? 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+    : 'Inter'
 
-const headingFont = createInterFont(
-    {
-        size: {
-            5: 13,
-            6: 15,
-            9: 32,
-            10: 44,
-        },
-        transform: {
-            6: 'uppercase',
-            7: 'none',
-        },
-        weight: {
-            6: '400',
-            7: '700',
-        },
-        color: {
-            6: '$colorFocus',
-            7: '$color',
-        },
-        letterSpacing: {
-            5: 2,
-            6: 1,
-            7: 0,
-            8: 0,
-            9: -1,
-            10: -1.5,
-            12: -2,
-            14: -3,
-            15: -4,
-        },
-        // for native
-        face: {
-            700: { normal: 'InterBold' },
-            800: { normal: 'InterBold' },
-            900: { normal: 'InterBold' },
-        },
-    },
-    { sizeLineHeight: ( size ) => Math.round( size * 1.1 + ( size < 30 ? 10 : 5 ) ) }
-)
+const sizes = {
+    1: 11,
+    2: 12,
+    3: 13,
+    4: 14,
+    5: 15,
+    6: 16,
+    7: 18,
+    8: 20,
+    9: 24,
+    10: 30,
+    11: 36,
+    12: 48,
+    13: 60,
+    14: 72,
+    15: 96,
+    16: 128,
+} as const
 
-const bodyFont = createInterFont(
-    {
-        weight: {
-            1: '400',
-            7: '600',
-        },
-    },
-    {
-        sizeSize: ( size ) => Math.round( size ),
-        sizeLineHeight: ( size ) => Math.round( size * 1.1 + ( size >= 12 ? 8 : 4 ) ),
-    }
-)
-
-const monoFont = createGenericFont(
-    `"ui-monospace", "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace`,
-    {
-        weight: {
-            1: '500',
-        },
-        size: {
-            1: 11,
-            2: 12,
-            3: 13,
-            4: 14,
-            5: 16,
-            6: 18,
-            7: 20,
-            8: 22,
-            9: 30,
-            10: 42,
-            11: 52,
-            12: 62,
-            13: 72,
-            14: 92,
-            15: 114,
-            16: 124,
-        },
-    },
-    {
-        sizeLineHeight: ( x ) => x * 1.5,
-    }
-)
+// face maps are for native — each weight key maps to the loaded font family name
+const face = {
+    300: { normal: 'Inter_300Light' },
+    400: { normal: 'Inter_400Regular' },
+    500: { normal: 'Inter_500Medium' },
+    600: { normal: 'Inter_600SemiBold' },
+    700: { normal: 'Inter_700Bold' },
+} as const
 
 export const fonts = {
-    // noto: notoFont as any,
-    heading: headingFont,
-    body: bodyFont,
-    mono: monoFont,
-    silkscreen: silkscreenFont,
+    heading: createFont( {
+        family,
+        size: sizes,
+        lineHeight: Object.fromEntries( Object.entries( sizes ).map( ( [ k, v ] ) => [ k, Math.round( +v * 1.2 ) ] ) ),
+        weight: { 1: '400', 7: '600' },
+        letterSpacing: { 1: 0, 8: -0.5, 10: -1 },
+        face,
+    } ),
+    body: createFont( {
+        family,
+        size: sizes,
+        lineHeight: Object.fromEntries( Object.entries( sizes ).map( ( [ k, v ] ) => [ k, Math.round( +v * 1.45 ) ] ) ),
+        weight: { 1: '400', 7: '600' },
+        letterSpacing: { 1: 0 },
+        face,
+    } ),
+    mono: createFont( {
+        family: isWeb
+            ? '"ui-monospace", "SFMono-Regular", "SF Mono", Menlo, Consolas, "Liberation Mono", monospace'
+            : 'Courier',
+        size: sizes,
+        lineHeight: Object.fromEntries( Object.entries( sizes ).map( ( [ k, v ] ) => [ k, Math.round( +v * 1.5 ) ] ) ),
+        weight: { 1: '500' },
+        letterSpacing: { 1: 0 },
+    } ),
 }

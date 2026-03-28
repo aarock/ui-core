@@ -73,73 +73,134 @@ export declare const baseConfig: {
         z: "zIndex";
     };
     fonts: {
-        heading: import("@tamagui/core").FillInFont<{
+        heading: {
+            family: string;
             size: {
-                5: number;
-                6: number;
-                9: number;
-                10: number;
+                readonly 1: 11;
+                readonly 2: 12;
+                readonly 3: 13;
+                readonly 4: 14;
+                readonly 5: 15;
+                readonly 6: 16;
+                readonly 7: 18;
+                readonly 8: 20;
+                readonly 9: 24;
+                readonly 10: 30;
+                readonly 11: 36;
+                readonly 12: 48;
+                readonly 13: 60;
+                readonly 14: 72;
+                readonly 15: 96;
+                readonly 16: 128;
             };
-            transform: {
-                6: "uppercase";
-                7: "none";
+            lineHeight: {
+                [k: string]: number;
             };
             weight: {
-                6: string;
-                7: string;
-            };
-            color: {
-                6: string;
+                1: string;
                 7: string;
             };
             letterSpacing: {
-                5: number;
-                6: number;
-                7: number;
+                1: number;
                 8: number;
-                9: number;
                 10: number;
-                12: number;
-                14: number;
-                15: number;
             };
             face: {
-                700: {
-                    normal: string;
+                readonly 300: {
+                    readonly normal: "Inter_300Light";
                 };
-                800: {
-                    normal: string;
+                readonly 400: {
+                    readonly normal: "Inter_400Regular";
                 };
-                900: {
-                    normal: string;
+                readonly 500: {
+                    readonly normal: "Inter_500Medium";
+                };
+                readonly 600: {
+                    readonly normal: "Inter_600SemiBold";
+                };
+                readonly 700: {
+                    readonly normal: "Inter_700Bold";
                 };
             };
-        }, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
-        body: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | "true" | 11 | 16>;
+        };
+        body: {
+            family: string;
+            size: {
+                readonly 1: 11;
+                readonly 2: 12;
+                readonly 3: 13;
+                readonly 4: 14;
+                readonly 5: 15;
+                readonly 6: 16;
+                readonly 7: 18;
+                readonly 8: 20;
+                readonly 9: 24;
+                readonly 10: 30;
+                readonly 11: 36;
+                readonly 12: 48;
+                readonly 13: 60;
+                readonly 14: 72;
+                readonly 15: 96;
+                readonly 16: 128;
+            };
+            lineHeight: {
+                [k: string]: number;
+            };
+            weight: {
+                1: string;
+                7: string;
+            };
+            letterSpacing: {
+                1: number;
+            };
+            face: {
+                readonly 300: {
+                    readonly normal: "Inter_300Light";
+                };
+                readonly 400: {
+                    readonly normal: "Inter_400Regular";
+                };
+                readonly 500: {
+                    readonly normal: "Inter_500Medium";
+                };
+                readonly 600: {
+                    readonly normal: "Inter_600SemiBold";
+                };
+                readonly 700: {
+                    readonly normal: "Inter_700Bold";
+                };
+            };
+        };
         mono: {
+            family: string;
+            size: {
+                readonly 1: 11;
+                readonly 2: 12;
+                readonly 3: 13;
+                readonly 4: 14;
+                readonly 5: 15;
+                readonly 6: 16;
+                readonly 7: 18;
+                readonly 8: 20;
+                readonly 9: 24;
+                readonly 10: 30;
+                readonly 11: 36;
+                readonly 12: 48;
+                readonly 13: 60;
+                readonly 14: 72;
+                readonly 15: 96;
+                readonly 16: 128;
+            };
+            lineHeight: {
+                [k: string]: number;
+            };
             weight: {
                 1: string;
             };
-            size: {
+            letterSpacing: {
                 1: number;
-                2: number;
-                3: number;
-                4: number;
-                5: number;
-                6: number;
-                7: number;
-                8: number;
-                9: number;
-                10: number;
-                11: number;
-                12: number;
-                13: number;
-                14: number;
-                15: number;
-                16: number;
             };
         };
-        silkscreen: import("@tamagui/core").FillInFont<import("@tamagui/core").GenericFont, 1 | 3 | 2 | 5 | 13 | 15 | 4 | 6 | 7 | 8 | 9 | 10 | 12 | 14 | 11 | 16>;
     };
     mediaQueryDefaultActive: {
         xl: boolean;

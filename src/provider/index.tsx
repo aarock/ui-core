@@ -1,8 +1,9 @@
 import { ElementType, createContext, type PropsWithChildren, useContext } from "react"
 import { TamaguiProvider, createTamagui } from "@tamagui/core"
+import { PortalProvider } from "@tamagui/portal"
+
 import { SafeAreaProvider } from "./safe-area-provider"
 import { FontProvider } from "./font-provider"
-import { PortalProvider } from "./portal-provider"
 import { baseAnimations } from "./animations"
 import { baseTokens, baseThemes } from "./tokens"
 import { baseConfig } from "./base"

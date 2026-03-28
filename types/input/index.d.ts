@@ -34,10 +34,10 @@ export declare const Input: import("react").ForwardRefExoticComponent<Omit<impor
         variant?: "default" | "mute" | undefined;
     }>, "value" | "onChange"> & {
         value?: string;
-        onChange?: (value: import("react").ChangeEvent<HTMLInputElement>) => void;
+        onChange?: (event: import("react").ChangeEvent<HTMLInputElement>) => void;
     }, import("@tamagui/core").TamaguiTextElement, import("@tamagui/core").RNTamaguiTextNonStyleProps & {
         value?: string;
-        onChange?: (value: import("react").ChangeEvent<HTMLInputElement>) => void;
+        onChange?: (event: import("react").ChangeEvent<HTMLInputElement>) => void;
     }, import("@tamagui/core").TextStylePropsBase & {
         readonly placeholderColor?: import("@tamagui/core").ColorTokens | undefined;
     }, {

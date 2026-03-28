@@ -56,21 +56,19 @@ const TextAreaFieldBase = styled( Text, {
 
 export const TextAreaField = TextAreaFieldBase.styleable<{
     value?: string,
-    onChange?: ( value: ChangeEvent<HTMLTextAreaElement> ) => void
+    onChange?: ( event: ChangeEvent<HTMLTextAreaElement> ) => void
 }>( ( { onChange, ...props } ) => {
 
     const { value, onValueChange } = useContext( Context )
 
     return <TextAreaFieldBase
         value={ value }
-        //@ts-ignore
-        onChange={ event => {
-            //@ts-ignore
-            const value = event.target.value
-            //@ts-ignore
-            onChange?.( event )
-            onValueChange?.( value )
-        } }
+        { ...{
+            onChange: ( event: ChangeEvent<HTMLTextAreaElement> ) => {
+                onChange?.( event )
+                onValueChange?.( event.target.value )
+            }
+        } as any }
         { ...props }
     />
 

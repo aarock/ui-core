@@ -21,10 +21,10 @@ export declare const InputField: import("@tamagui/core").TamaguiComponent<Omit<i
     variant?: "default" | "mute" | undefined;
 }>, "value" | "onChange"> & {
     value?: string;
-    onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }, import("@tamagui/core").TamaguiTextElement, import("@tamagui/core").RNTamaguiTextNonStyleProps & {
     value?: string;
-    onChange?: (value: ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 }, import("@tamagui/core").TextStylePropsBase & {
     readonly placeholderColor?: import("@tamagui/core").ColorTokens | undefined;
 }, {
