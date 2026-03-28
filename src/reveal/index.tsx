@@ -1,10 +1,11 @@
-import { View, type GetProps } from "@tamagui/core"
-type StackProps = GetProps<typeof View>
+// type StackProps = GetProps<typeof View>
+// import { View, type GetProps } from "@tamagui/core"
 import { useRef, useLayoutEffect, useEffect, isValidElement, type CSSProperties } from "react"
 import { Spring, useSpringValue, useTransition, easings, type SpringConfig } from "../animation"
 import { useMeasure } from "../use-measure"
+import { YStack, type YStackProps } from "../box"
 
-export type RevealProps = StackProps & {
+export type RevealProps = YStackProps & {
     config?: SpringConfig
 }
 
@@ -47,9 +48,9 @@ export function Reveal ( {
     }, [ children ] )
 
     return transition( ( springs, item ) => item && <Spring style={ { ...outerStyle, ...springs } }>
-        <View ref={ ref } style={ innerStyle } { ...rest }>
+        <YStack ref={ ref } style={ innerStyle } { ...rest }>
             { childRef.current || children }
-        </View>
+        </YStack>
     </Spring> )
 
 }

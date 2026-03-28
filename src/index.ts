@@ -1,4 +1,4 @@
-export { View, View as Stack, styled, withStaticProperties, type GetProps, type TamaguiWebElement as UIElement } from "@tamagui/core"
+export { View, styled, withStaticProperties, type GetProps, type TamaguiWebElement as UIElement } from "@tamagui/core"
 export { AnimatePresence, type AnimatePresenceProps } from "@tamagui/animate-presence"
 export { PortalProvider as Destination } from "@tamagui/portal"
 export { Slot, type SlotProps } from "@radix-ui/react-slot"

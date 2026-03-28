@@ -1,9 +1,7 @@
-import { View, type GetProps } from "@tamagui/core";
-type StackProps = GetProps<typeof View>;
 import { type SpringConfig } from "../animation";
-export type RevealProps = StackProps & {
+import { type YStackProps } from "../box";
+export type RevealProps = YStackProps & {
     config?: SpringConfig;
 };
 export declare function Reveal({ config, children, ...rest }: RevealProps): import("react").JSX.Element;
-export {};
 //# sourceMappingURL=index.d.ts.map

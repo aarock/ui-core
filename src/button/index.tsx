@@ -1,4 +1,5 @@
-import { styled, withStaticProperties, createStyledContext, type GetProps, type SizeTokens, View } from "@tamagui/core"
+import { styled, withStaticProperties, createStyledContext, type GetProps, type SizeTokens } from "@tamagui/core"
+import { Box } from "../box"
 import { Text } from "../text"
 import { Spacer } from "../spacer"
 import { Icon } from "../icon"
@@ -29,7 +30,7 @@ const shadowPressStyles = {
 }
 
 export type ButtonFrameProps = Omit<GetProps<typeof ButtonFrame>, 'render'>
-export const ButtonFrame = styled( View, {
+export const ButtonFrame = styled( Box, {
     context: ButtonContext,
     group: "btn",
     name: "Button",

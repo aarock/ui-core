@@ -2,6 +2,14 @@ import { type GetProps, type SizeTokens } from "@tamagui/core";
 export type ButtonFrameProps = Omit<GetProps<typeof ButtonFrame>, 'render'>;
 export declare const ButtonFrame: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
     size?: SizeTokens | undefined;
+    transparent?: boolean | undefined;
+    elevation?: number | SizeTokens | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    "...size"?: number | undefined;
     variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
     isDisabled?: boolean | undefined;
     isActive?: boolean | undefined;
@@ -29,26 +37,58 @@ declare const ButtonIcon: import("@tamagui/core").TamaguiComponent<import("@tama
     };
 } & import("@tamagui/core").StaticConfigPublic>;
 export type ButtonProps = Omit<GetProps<typeof ButtonFrame>, 'render'>;
-export declare const Button: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "size" | keyof import("@tamagui/core").StackStyleBase | "variant" | "isDisabled" | "isActive" | "isReadOnly"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStyleBase> & {
+export declare const Button: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "size" | "transparent" | "elevation" | keyof import("@tamagui/core").StackStyleBase | "fullscreen" | "circular" | "elevate" | "bordered" | "chromeless" | "...size" | "variant" | "isDisabled" | "isActive" | "isReadOnly"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStyleBase> & {
     size?: SizeTokens | undefined;
+    transparent?: boolean | undefined;
+    elevation?: number | SizeTokens | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    "...size"?: number | undefined;
     variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
     isDisabled?: boolean | undefined;
     isActive?: boolean | undefined;
     isReadOnly?: boolean | undefined;
 } & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStyleBase>> & import("@tamagui/core").WithPseudoProps<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStyleBase> & {
     size?: SizeTokens | undefined;
+    transparent?: boolean | undefined;
+    elevation?: number | SizeTokens | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    "...size"?: number | undefined;
     variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
     isDisabled?: boolean | undefined;
     isActive?: boolean | undefined;
     isReadOnly?: boolean | undefined;
 } & import("@tamagui/core").WithShorthands<import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStyleBase>>> & import("@tamagui/core").WithMediaProps<import("@tamagui/core").WithThemeShorthandsAndPseudos<import("@tamagui/core").StackStyleBase, {
     size?: SizeTokens | undefined;
+    transparent?: boolean | undefined;
+    elevation?: number | SizeTokens | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    "...size"?: number | undefined;
     variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
     isDisabled?: boolean | undefined;
     isActive?: boolean | undefined;
     isReadOnly?: boolean | undefined;
 }>> & import("react").RefAttributes<import("@tamagui/core").TamaguiElement>> & import("@tamagui/core").StaticComponentObject<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
     size?: SizeTokens | undefined;
+    transparent?: boolean | undefined;
+    elevation?: number | SizeTokens | undefined;
+    fullscreen?: boolean | undefined;
+    circular?: boolean | undefined;
+    elevate?: boolean | undefined;
+    bordered?: boolean | undefined;
+    chromeless?: boolean | "all" | undefined;
+    "...size"?: number | undefined;
     variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
     isDisabled?: boolean | undefined;
     isActive?: boolean | undefined;
@@ -56,6 +96,14 @@ export declare const Button: import("react").ForwardRefExoticComponent<Omit<impo
 }, import("@tamagui/core").StaticConfigPublic> & Omit<import("@tamagui/core").StaticConfigPublic, "staticConfig" | "styleable"> & {
     __tama: [import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
         size?: SizeTokens | undefined;
+        transparent?: boolean | undefined;
+        elevation?: number | SizeTokens | undefined;
+        fullscreen?: boolean | undefined;
+        circular?: boolean | undefined;
+        elevate?: boolean | undefined;
+        bordered?: boolean | undefined;
+        chromeless?: boolean | "all" | undefined;
+        "...size"?: number | undefined;
         variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
         isDisabled?: boolean | undefined;
         isActive?: boolean | undefined;
@@ -64,6 +112,14 @@ export declare const Button: import("react").ForwardRefExoticComponent<Omit<impo
 } & {
     Frame: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
         size?: SizeTokens | undefined;
+        transparent?: boolean | undefined;
+        elevation?: number | SizeTokens | undefined;
+        fullscreen?: boolean | undefined;
+        circular?: boolean | undefined;
+        elevate?: boolean | undefined;
+        bordered?: boolean | undefined;
+        chromeless?: boolean | "all" | undefined;
+        "...size"?: number | undefined;
         variant?: "danger" | "default" | "option" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
         isDisabled?: boolean | undefined;
         isActive?: boolean | undefined;
