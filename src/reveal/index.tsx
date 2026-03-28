@@ -1,4 +1,5 @@
-import { Stack, type StackProps } from "@tamagui/core"
+import { View, type GetProps } from "@tamagui/core"
+type StackProps = GetProps<typeof View>
 import { useRef, useLayoutEffect, useEffect, isValidElement, type CSSProperties } from "react"
 import { Spring, useSpringValue, useTransition, easings, type SpringConfig } from "../animation"
 import { useMeasure } from "../use-measure"
@@ -46,9 +47,9 @@ export function Reveal ( {
     }, [ children ] )
 
     return transition( ( springs, item ) => item && <Spring style={ { ...outerStyle, ...springs } }>
-        <Stack ref={ ref } style={ innerStyle } { ...rest }>
+        <View ref={ ref } style={ innerStyle } { ...rest }>
             { childRef.current || children }
-        </Stack>
+        </View>
     </Spring> )
 
 }

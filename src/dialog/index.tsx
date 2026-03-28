@@ -56,9 +56,7 @@ function DialogFrame ( {
   return <FloatingPortal>
     <AnimatePresence>{ isOpen &&
       <Blur
-        fullscreen
-        animation="slow"
-        variant="subtle"
+        { ...{ fullscreen: true, animation: "slow", variant: "subtle" } as any }
         enterStyle={ { opacity: 0 } }
         exitStyle={ { opacity: 0 } }
         onPress={ () => setOpen( false ) }
@@ -69,7 +67,7 @@ function DialogFrame ( {
       <FloatingOverlay className="Dialog-overlay" lockScroll style={ { zIndex: 200 } }>
         <FloatingFocusManager context={ context }>
           <Box
-            fullscreen
+            position="absolute" top={ 0 } left={ 0 } right={ 0 } bottom={ 0 }
 
             animation="medium"
             enterStyle={ { opacity: 0, y: -4, scale: 1.02 } }
@@ -77,10 +75,10 @@ function DialogFrame ( {
 
             alignItems="center"
             justifyContent="center"
-            ref={ refs.setFloating }
+            ref={ refs.setFloating as any }
             aria-labelledby={ headingId }
             aria-describedby={ descriptionId }
-            { ...getFloatingProps() }
+            { ...getFloatingProps() as any }
           >{ render?.( getReferenceProps, setOpen ) }{ children }</Box>
         </FloatingFocusManager>
       </FloatingOverlay>
@@ -96,7 +94,7 @@ function DialogContent ( props: YStackProps ) {
     shadow="$lg"
     minWidth={ 200 }
     maxWidth={ 400 }
-    pos="relative"
+    position="relative"
     zIndex={ 2000 }
     { ...props } />
 }
@@ -109,7 +107,7 @@ export type DialogHeaderProps = XStackProps & {
 
 function DialogHeader ( { icon, color, label, ...props }: DialogHeaderProps ) {
   return <XStack p="$lg" gap="$lg" alignItems="center" { ...props }>
-    { icon && <Icon name={ icon } size="$lg" color={ color } /> }
+    { icon && <Icon name={ icon } size="$lg" color={ color as any } /> }
     <Text fontSize={ 20 } fontWeight={ 500 }>{ label }</Text>
   </XStack>
 }

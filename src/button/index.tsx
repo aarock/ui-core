@@ -1,4 +1,4 @@
-import { Text, styled, withStaticProperties, createStyledContext, type GetProps, type SizeTokens, Stack } from "@tamagui/core"
+import { Text, styled, withStaticProperties, createStyledContext, type GetProps, type SizeTokens, View } from "@tamagui/core"
 import { Spacer } from "../spacer"
 import { Icon } from "../icon"
 
@@ -28,7 +28,7 @@ const shadowPressStyles = {
 }
 
 export type ButtonFrameProps = GetProps<typeof ButtonFrame>
-export const ButtonFrame = styled( Stack, {
+export const ButtonFrame = styled( View, {
     context: ButtonContext,
     group: "btn",
     name: "Button",

@@ -1,13 +1,7 @@
 import { type GetProps } from "@tamagui/core";
 import { type ContextProps } from "./context";
 export type InputFrameProps = GetProps<typeof InputFrame>;
-declare const InputFrame: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    size?: import("@tamagui/core").SizeTokens | undefined;
-    variant?: "default" | "ghost" | undefined;
-}>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {
-    size?: import("@tamagui/core").SizeTokens | undefined;
-    variant?: "default" | "ghost" | undefined;
-}, import("@tamagui/core").StaticConfigPublic>;
+declare const InputFrame: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic>;
 export type InputIconProps = GetProps<typeof InputIcon>;
 declare const InputIcon: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, any, import("@tamagui/core").TamaguiComponentPropsBaseBase & {
     name?: string;
@@ -15,7 +9,7 @@ declare const InputIcon: import("@tamagui/core").TamaguiComponent<import("@tamag
     fill?: string;
     stroke?: string;
 } & import("react").RefAttributes<any>, import("@tamagui/core").StackStyleBase & {
-    readonly color?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
+    readonly color?: import("@tamagui/core").ColorTokens | undefined;
 }, {
     size?: import("@tamagui/core").SizeTokens | undefined;
     variant?: "default" | "mute" | undefined;
@@ -28,34 +22,13 @@ export type InputAdornmentsProps = GetProps<typeof InputAdornments>;
 declare const InputAdornments: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic>;
 export type { InputFieldProps } from "./field";
 export type InputProps = GetProps<typeof InputFrame>;
-export declare const Input: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    size?: import("@tamagui/core").SizeTokens | undefined;
-    variant?: "default" | "ghost" | undefined;
-}>, keyof ContextProps> & ContextProps & import("react").RefAttributes<import("@tamagui/core").TamaguiElement>> & import("@tamagui/core").StaticComponentObject<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    size?: import("@tamagui/core").SizeTokens | undefined;
-    variant?: "default" | "ghost" | undefined;
-}>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {
-    size?: import("@tamagui/core").SizeTokens | undefined;
-    variant?: "default" | "ghost" | undefined;
-}, import("@tamagui/core").StaticConfigPublic> & Omit<import("@tamagui/core").StaticConfigPublic, "staticConfig" | "extractable" | "styleable"> & {
-    __tama: [Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-        size?: import("@tamagui/core").SizeTokens | undefined;
-        variant?: "default" | "ghost" | undefined;
-    }>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {
-        size?: import("@tamagui/core").SizeTokens | undefined;
-        variant?: "default" | "ghost" | undefined;
-    }, import("@tamagui/core").StaticConfigPublic];
+export declare const Input: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}>, keyof ContextProps> & ContextProps & import("react").RefAttributes<import("@tamagui/core").TamaguiElement>> & import("@tamagui/core").StaticComponentObject<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic> & Omit<import("@tamagui/core").StaticConfigPublic, "staticConfig" | "styleable"> & {
+    __tama: [Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic];
 } & {
     Adornments: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic>;
-    Frame: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-        size?: import("@tamagui/core").SizeTokens | undefined;
-        variant?: "default" | "ghost" | undefined;
-    }>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {
-        size?: import("@tamagui/core").SizeTokens | undefined;
-        variant?: "default" | "ghost" | undefined;
-    }, import("@tamagui/core").StaticConfigPublic>;
+    Frame: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {}>, keyof ContextProps> & ContextProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & ContextProps, import("@tamagui/core").StackStyleBase, {}, import("@tamagui/core").StaticConfigPublic>;
     Field: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiTextNonStyleProps, import("@tamagui/core").TextStylePropsBase & {
-        readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
+        readonly placeholderColor?: import("@tamagui/core").ColorTokens | undefined;
     }, {
         size?: "$md" | "$lg" | "$sm" | undefined;
         variant?: "default" | "mute" | undefined;
@@ -66,7 +39,7 @@ export declare const Input: import("react").ForwardRefExoticComponent<Omit<impor
         value?: string;
         onChange?: (value: import("react").ChangeEvent<HTMLInputElement>) => void;
     }, import("@tamagui/core").TextStylePropsBase & {
-        readonly placeholderColor?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
+        readonly placeholderColor?: import("@tamagui/core").ColorTokens | undefined;
     }, {
         size?: "$md" | "$lg" | "$sm" | undefined;
         variant?: "default" | "mute" | undefined;
@@ -84,7 +57,7 @@ export declare const Input: import("react").ForwardRefExoticComponent<Omit<impor
         fill?: string;
         stroke?: string;
     } & import("react").RefAttributes<any>, import("@tamagui/core").StackStyleBase & {
-        readonly color?: Omit<import("@tamagui/core").ColorTokens | import("@tamagui/core").ThemeValueFallbackColor, "unset"> | undefined;
+        readonly color?: import("@tamagui/core").ColorTokens | undefined;
     }, {
         size?: import("@tamagui/core").SizeTokens | undefined;
         variant?: "default" | "mute" | undefined;

@@ -1,71 +1,97 @@
 import { styled, type GetProps } from "@tamagui/core"
 import { ThemeableStack } from "@tamagui/stacks"
 
+// Variant objects defined outside styled() so they can be shared across components
+// without duplicating. `as const` is required by the Tamagui compiler for type inference.
+
 const card = {
     p: "$md",
     gap: "$md",
-    bg: "$neutral1",
+    backgroundColor: "$neutral1",
     borderColor: "$neutral5",
     borderRadius: "$md",
     borderWidth: 1,
-} as any
+} as const
 
 const well = {
     p: "$md",
     gap: "$md",
-    bg: "$neutral2",
+    backgroundColor: "$neutral2",
     borderColor: "$neutral4",
     borderRadius: "$md",
     borderWidth: 1,
-} as any
+} as const
 
 const shadowSm = {
-      shadowColor: "$shadow1",
-      shadowOffset:{ width:0, height:1 },
-      shadowRadius: 1,
+    shadowColor: "$shadow1",
+    shadowOffset: { width: 0, height: 1 },
+    shadowRadius: 1,
 } as const
 
 const shadowMd = {
-  shadowColor: "$shadow2",
-  shadowOffset: { width: 0, height: 1 },
-  shadowRadius: 3,
+    shadowColor: "$shadow2",
+    shadowOffset: { width: 0, height: 1 },
+    shadowRadius: 3,
 } as const
 
 const shadowLg = {
-      shadowColor: "$shadow4",
-      shadowOffset: { width:0, height:2 },
-      shadowRadius: 5,
+    shadowColor: "$shadow4",
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 5,
+} as const
+
+// Shorthand variants — write align="start" instead of alignItems="flex-start" etc.
+const align = {
+    start:    { alignItems: 'flex-start' as const },
+    end:      { alignItems: 'flex-end' as const },
+    center:   { alignItems: 'center' as const },
+    stretch:  { alignItems: 'stretch' as const },
+    baseline: { alignItems: 'baseline' as const },
+} as const
+
+const justify = {
+    start:   { justifyContent: 'flex-start' as const },
+    end:     { justifyContent: 'flex-end' as const },
+    center:  { justifyContent: 'center' as const },
+    between: { justifyContent: 'space-between' as const },
+    around:  { justifyContent: 'space-around' as const },
+    evenly:  { justifyContent: 'space-evenly' as const },
+} as const
+
+const sharedVariants = {
+    variant: { card, well },
+    shadow: { $sm: shadowSm, $md: shadowMd, $lg: shadowLg },
+    align,
+    justify,
 } as const
 
 export type BoxProps = GetProps<typeof Box>
 export const Box = styled( ThemeableStack, {
     name: 'Box',
     variants: {
-        // variant: { card, well },
-        // shadow: { $sm: shadowSm, $md: shadowMd, $lg: shadowLg },
-        "...size": ( size: number ) => ( {
-            px: size,
-            py: size,
-        } ),
-    }
+        "...size": ( size: number ) => ( { px: size, py: size } ),
+        align,
+        justify,
+    },
 } as const )
-
-export { Unspaced } from "@tamagui/core"
 
 export type XStackProps = GetProps<typeof XStack>
 export const XStack = styled( ThemeableStack, {
+    name: 'XStack',
     flexDirection: 'row',
-    variants: { variant: { card, well }, shadow: { $sm: shadowSm, $md: shadowMd, $lg: shadowLg } }
-} )
+    variants: sharedVariants,
+} as const )
 
 export type YStackProps = GetProps<typeof YStack>
 export const YStack = styled( ThemeableStack, {
+    name: 'YStack',
     flexDirection: 'column',
-    variants: { variant: { card, well }, shadow: { $sm: shadowSm, $md: shadowMd, $lg: shadowLg } }
-} )
+    variants: sharedVariants,
+} as const )
 
 export type ZStackProps = GetProps<typeof ZStack>
 export const ZStack = styled( ThemeableStack, {
+    name: 'ZStack',
     position: 'relative',
-    variants: { variant: { card, well }, shadow: { $sm: shadowSm, $md: shadowMd, $lg: shadowLg } }
-}, { neverFlatten: true, isZStack: true } )
+    variants: sharedVariants,
+} as const, { neverFlatten: true, isZStack: true } )

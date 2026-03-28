@@ -4,7 +4,7 @@ import { Context, StyledContext } from "./context"
 
 export type InputFieldProps = GetProps<typeof InputFieldBase>
 const InputFieldBase = styled( Text, {
-    tag: "input",
+    render: "input",
     context: StyledContext,
     flex: 1,
     minWidth: 0,
@@ -60,13 +60,18 @@ export const InputField = InputFieldBase.styleable<{
     onChange?: ( value: ChangeEvent<HTMLInputElement> ) => void
 }>( ( { onChange, ...props } ) => {
 
-    const { value, onValueChange } = useContext( Context )
+    const { value, onValueChange, isReadOnly } = useContext( Context )
 
     return <InputFieldBase
         value={ value }
         //@ts-ignore
+        readOnly={ isReadOnly }
+        //@ts-ignore
         onChange={ event => {
+            if ( isReadOnly ) return
+            //@ts-ignore
             const value = event.target.value
+            //@ts-ignore
             onChange?.( event )
             onValueChange?.( value )
         } }

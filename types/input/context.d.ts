@@ -3,11 +3,13 @@ export type ContextProps = {
     value?: string;
     onChange?: (event: any) => void;
     onValueChange?: (value: string) => void;
+    isReadOnly?: boolean;
 };
 export declare const Context: import("react").Context<ContextProps>;
 export declare const StyledContext: import("@tamagui/core").StyledContext<{
     size: SizeTokens;
     variant: string;
     disabled: boolean;
+    isReadOnly: boolean;
 }>;
 //# sourceMappingURL=context.d.ts.map

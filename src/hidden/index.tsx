@@ -1,7 +1,7 @@
-import { styled, Stack, type GetProps } from "@tamagui/core"
+import { styled, View, type GetProps } from "@tamagui/core"
 
 export type HiddenProps = GetProps<typeof Hidden>
-export const Hidden = styled( Stack, {
+export const Hidden = styled( View, {
   name: 'Hidden',
   position: "absolute",
   width: 1,

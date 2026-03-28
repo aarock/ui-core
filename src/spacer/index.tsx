@@ -1,8 +1,8 @@
-import { GetProps, Stack, styled } from "@tamagui/core"
+import { GetProps, View, styled } from "@tamagui/core"
 
 export type SpacerProps = GetProps<typeof Spacer>
 
-export const Spacer = styled( Stack, {
+export const Spacer = styled( View, {
     name: "Spacer",
     display: "flex",
     minWidth: 1,

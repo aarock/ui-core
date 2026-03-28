@@ -1,4 +1,4 @@
-import { GenericFont, createFont } from '@tamagui/web'
+import { GenericFont, createFont } from '@tamagui/core'
 
 const genericFontSizes = {
     1: 10,

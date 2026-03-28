@@ -1,10 +1,10 @@
-import { Stack, withStaticProperties, styled, type GetProps } from "@tamagui/core"
+import { View, withStaticProperties, styled, type GetProps } from "@tamagui/core"
 import { StyledContext, Context, type ContextProps } from "./context"
 import { TextAreaField } from "./field"
 import { Icon } from "../icon"
 import { useState } from "react"
 
-const TextAreaFrameBase = styled( Stack, {
+const TextAreaFrameBase = styled( View, {
   context: StyledContext,
   name: "TextArea",
   minWidth: 0,
@@ -19,15 +19,12 @@ const TextAreaFrameBase = styled( Stack, {
       default: {
 
         borderWidth: 1,
-        fontFamily: "$body",
-        color: "$neutral11",
         borderColor: "$neutral7",
         backgroundColor: "$neutral2",
         shadowRadius: 1, shadowOpacity: 0.2,
         shadowOffset: { width: 0, height: 1 },
 
         hoverStyle: {
-          color: "$neutral12",
           borderColor: "$neutral6",
           backgroundColor: "$neutral1",
           shadowRadius: 1, shadowOpacity: 0.1,
@@ -35,7 +32,6 @@ const TextAreaFrameBase = styled( Stack, {
         },
 
         pressStyle: {
-          color: "$neutral12",
           borderColor: "$neutral8",
           backgroundColor: "$neutral1",
           shadowRadius: 0, shadowOpacity: 0,
@@ -43,7 +39,6 @@ const TextAreaFrameBase = styled( Stack, {
         },
 
         focusStyle: {
-          color: "$neutral12",
           borderColor: "$neutral8",
           backgroundColor: "$neutral1",
           shadowRadius: 0, shadowOpacity: 0,
@@ -53,9 +48,7 @@ const TextAreaFrameBase = styled( Stack, {
       },
 
       ghost: {
-        color: "$neutral12",
         focusStyle: {
-          color: "$neutral12",
           backgroundColor: "$neutral2",
         },
       },
@@ -79,7 +72,7 @@ const TextAreaFrameBase = styled( Stack, {
 export type TextAreaFrameProps = GetProps<typeof TextAreaFrame>
 const TextAreaFrame = TextAreaFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, ...props } ) => {
   const [ isFocused, setIsFocused ] = useState( false )
-  const variant = props?.variant || "default"
+  const variant = ( props as any )?.variant || "default"
   const variantProps: any = TextAreaFrameBase?.staticConfig?.variants?.variant?.[ variant ]
   const focusProps: any = isFocused ? variantProps?.focusStyle : {}
   const hoverProps: any = isFocused ? { hoverStyle: variantProps?.focusStyle } : {}
@@ -127,7 +120,7 @@ const TextAreaIcon = styled( Icon, {
 } as const )
 
 export type TextAreaAdornmentsProps = GetProps<typeof TextAreaAdornments>
-const TextAreaAdornments = styled( Stack, {
+const TextAreaAdornments = styled( View, {
   context: StyledContext,
   name: "TextAreaAdornments",
   position: "relative",

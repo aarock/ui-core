@@ -11,5 +11,5 @@ export type SortProps<T> = YStackProps & {
     renderEmpty?: () => ReactNode;
     getKey?: (item: T) => string;
 };
-export declare function Sort<T>({ value, onValueChange, renderItem, renderEmpty, getKey, ...rest }: SortProps<T>): import("react/jsx-runtime").JSX.Element;
+export declare function Sort<T>({ value, onValueChange, renderItem, renderEmpty, ...rest }: SortProps<T>): import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=index.d.ts.map

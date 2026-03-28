@@ -1,7 +1,7 @@
-import { styled, Stack, type GetProps } from "@tamagui/core"
+import { styled, View, type GetProps } from "@tamagui/core"
 
 export type ScrollProps = GetProps<typeof Scroll>
-export const Scroll = styled( Stack, {
+export const Scroll = styled( View, {
   name: 'Scroll',
   flexGrow: 1,
   flexShrink: 1,

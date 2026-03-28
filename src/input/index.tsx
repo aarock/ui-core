@@ -1,10 +1,10 @@
-import { Stack, withStaticProperties, styled, type GetProps } from "@tamagui/core"
+import { View, withStaticProperties, styled, type GetProps } from "@tamagui/core"
 import { StyledContext, Context, type ContextProps } from "./context"
 import { InputField } from "./field"
 import { Icon } from "../icon"
 import { useState } from "react"
 
-const InputFrameBase = styled( Stack, {
+const InputFrameBase = styled( View, {
   context: StyledContext,
   name: "Input",
   minWidth: 0,
@@ -19,15 +19,12 @@ const InputFrameBase = styled( Stack, {
       default: {
 
         borderWidth: 1,
-        fontFamily: "$body",
-        color: "$neutral11",
         borderColor: "$neutral7",
         backgroundColor: "$neutral2",
         shadowRadius: 1, shadowOpacity: 0.2,
         shadowOffset: { width: 0, height: 1 },
 
         hoverStyle: {
-          color: "$neutral12",
           borderColor: "$neutral6",
           backgroundColor: "$neutral1",
           shadowRadius: 1, shadowOpacity: 0.1,
@@ -35,7 +32,6 @@ const InputFrameBase = styled( Stack, {
         },
 
         pressStyle: {
-          color: "$neutral12",
           borderColor: "$neutral8",
           backgroundColor: "$neutral1",
           shadowRadius: 0, shadowOpacity: 0,
@@ -43,7 +39,6 @@ const InputFrameBase = styled( Stack, {
         },
 
         focusStyle: {
-          color: "$neutral12",
           borderColor: "$neutral8",
           backgroundColor: "$neutral1",
           shadowRadius: 0, shadowOpacity: 0,
@@ -53,9 +48,7 @@ const InputFrameBase = styled( Stack, {
       },
 
       ghost: {
-        color: "$neutral12",
         focusStyle: {
-          color: "$neutral12",
           backgroundColor: "$neutral2",
         },
       },
@@ -71,21 +64,41 @@ const InputFrameBase = styled( Stack, {
           px: tokens.space[ size ],
         }
       }
+    },
+
+    isReadOnly: {
+      true: {
+        cursor: "default",
+        backgroundColor: "$neutral3",
+        borderColor: "$neutral5",
+        hoverStyle: {
+          backgroundColor: "$neutral3",
+          borderColor: "$neutral5",
+          shadowRadius: 1, shadowOpacity: 0.2,
+          shadowOffset: { width: 0, height: 1 },
+        },
+        focusStyle: {
+          backgroundColor: "$neutral3",
+          borderColor: "$neutral5",
+          shadowRadius: 1, shadowOpacity: 0.2,
+        },
+      }
     }
 
   },
 } )
 
 export type InputFrameProps = GetProps<typeof InputFrame>
-const InputFrame = InputFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, ...props } ) => {
+const InputFrame = InputFrameBase.styleable<ContextProps>( ( { value, onFocus, onBlur, onValueChange, isReadOnly, ...props } ) => {
   const [ isFocused, setIsFocused ] = useState( false )
-  const variant = props?.variant || "default"
+  const variant = ( props as any )?.variant || "default"
   const variantProps: any = InputFrameBase?.staticConfig?.variants?.variant?.[ variant ]
-  const focusProps: any = isFocused ? variantProps?.focusStyle : {}
-  const hoverProps: any = isFocused ? { hoverStyle: variantProps?.focusStyle } : {}
-  return <Context.Provider value={ { value, onValueChange } }>
+  const focusProps: any = isFocused && !isReadOnly ? variantProps?.focusStyle : {}
+  const hoverProps: any = isFocused && !isReadOnly ? { hoverStyle: variantProps?.focusStyle } : {}
+  return <Context.Provider value={ { value, onValueChange, isReadOnly } }>
     <InputFrameBase
       tabIndex={ -1 }
+      isReadOnly={ isReadOnly }
       onFocus={ ( ...args ) => {
         setIsFocused( true )
         onFocus?.( ...args )
@@ -127,7 +140,7 @@ const InputIcon = styled( Icon, {
 } as const )
 
 export type InputAdornmentsProps = GetProps<typeof InputAdornments>
-const InputAdornments = styled( Stack, {
+const InputAdornments = styled( View, {
   context: StyledContext,
   name: "InputAdornments",
   position: "relative",

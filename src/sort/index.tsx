@@ -1,4 +1,3 @@
-import { Slot } from "@tamagui/core"
 import { ReactNode, useState } from 'react'
 import { CSS } from '@dnd-kit/utilities'
 import { useSortable } from '@dnd-kit/sortable'
@@ -32,7 +31,6 @@ export function Sort<T> ( {
     onValueChange,
     renderItem,
     renderEmpty,
-    getKey = v => ( v as any )?.id || ( v as any )?.key || JSON.stringify( v ),
     ...rest
 }: SortProps<T> ) {
 
@@ -41,11 +39,11 @@ export function Sort<T> ( {
     return <YStack { ...rest }>
         <DndProvider onDragEnd={ handleDragEnd }>
             <SortableContext items={ keys } strategy={ verticalListSortingStrategy }>
-                { ( value || [] )?.map( ( item, index ) => (
+                { ( value || [] )?.map?.( ( item, index ) => (
                     <Sortable
                         id={ keys[ index ] }
                         key={ keys[ index ] }
-                        render={ options => renderItem?.( item, options, index ) }
+                        renderContent={ options => renderItem?.( item, options as SortRenderOptions, index ) }
                     />
                 ) ) }{ !( value || [] )?.length && renderEmpty?.() }</SortableContext>
         </DndProvider>
@@ -62,7 +60,7 @@ export function Sort<T> ( {
             if ( toIndex === -1 ) return
             if ( fromIndex === toIndex ) return
 
-            const result = reorder( ( value || [] ), fromIndex, toIndex )
+            const result = reorder( value || [], fromIndex, toIndex )
             swap( fromIndex, toIndex )
             onValueChange?.( result )
 
@@ -73,10 +71,10 @@ export function Sort<T> ( {
 
 type SortableProps<T> = Omit<BoxProps, "children"> & {
     id: UniqueIdentifier
-    render?: ( options: SortRenderOptions ) => ReactNode
+    renderContent?: ( options: SortRenderOptions ) => ReactNode
 }
 
-function Sortable<T> ( { id, render, ...rest }: SortableProps<T> ) {
+function Sortable<T> ( { id, renderContent }: SortableProps<T> ) {
 
     const {
         attributes,
@@ -113,8 +111,8 @@ function Sortable<T> ( { id, render, ...rest }: SortableProps<T> ) {
     }
 
     return (
-        <Box { ...parentProps }>
-            <Slot children={ render?.( { isDragging, props: handleProps } ) || <></> } { ...rest } />
+        <Box { ...( parentProps as any ) }>
+            { renderContent?.( { isDragging, props: handleProps } ) }
         </Box>
     )
 }

@@ -1,4 +1,4 @@
-export declare const baseAnimations: import("@tamagui/web").AnimationDriver<{
+export declare const baseAnimations: import("@tamagui/core").AnimationDriver<{
     fast: string;
     medium: string;
     slow: string;

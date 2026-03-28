@@ -9,6 +9,6 @@ export declare const Blur: import("@tamagui/core").TamaguiComponent<import("@tam
     experimentalBlurMethod?: import("expo-blur").ExperimentalBlurMethod;
     blurMethod?: import("expo-blur").BlurMethod;
 } & import("react-native").ViewProps, import("@tamagui/core").StackStyleBase, {
-    variant?: "none" | "subtle" | "strong" | undefined;
+    variant?: "strong" | "none" | "subtle" | undefined;
 }, import("@tamagui/core").StaticConfigPublic>;
 //# sourceMappingURL=index.native.d.ts.map

@@ -63,7 +63,7 @@ const InputFieldBase = styled( TextInput, {
 
 export const InputField = InputFieldBase.styleable( props => {
 
-    const { value, onValueChange, onChange } = useContext( Context )
+    const { value, onValueChange, onChange, isReadOnly } = useContext( Context )
 
     const theme = useTheme()
     const placeholderColorProp = props.placeholderTextColor ?? props.placeholderColor ?? "$neutral7"
@@ -74,16 +74,17 @@ export const InputField = InputFieldBase.styleable( props => {
         "black"
 
     return <InputFieldBase
-        editable={ !props.disabled }
+        editable={ !props.disabled && !isReadOnly }
         placeholderTextColor={ placeholderTextColor }
         { ...props }
         value={ value }
         onChangeText={ text => {
+            if ( isReadOnly ) return
             onValueChange?.( text )
         } }
         onChange={ event => {
+            if ( isReadOnly ) return
             onChange?.( event )
-            // onValueChange?.( event?.nativeEvent?.text )
         } }
     />
 

@@ -1,4 +1,4 @@
-import { styled, Stack, type GetProps } from "@tamagui/core"
+import { styled, View, type GetProps } from "@tamagui/core"
 
 export type Insets = {
   top: number,
@@ -8,7 +8,7 @@ export type Insets = {
 }
 
 export type SafeProps = GetProps<typeof Safe>
-export const Safe = styled( Stack, {
+export const Safe = styled( View, {
   name: 'Safe',
   flexGrow: 1,
   flexShrink: 1,

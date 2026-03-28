@@ -4,7 +4,7 @@ import { Context, StyledContext } from "./context"
 
 export type TextAreaFieldProps = GetProps<typeof TextAreaFieldBase>
 const TextAreaFieldBase = styled( Text, {
-    tag: "textarea",
+    render: "textarea",
     context: StyledContext,
     flex: 1,
     borderWidth: 0,
@@ -65,7 +65,9 @@ export const TextAreaField = TextAreaFieldBase.styleable<{
         value={ value }
         //@ts-ignore
         onChange={ event => {
+            //@ts-ignore
             const value = event.target.value
+            //@ts-ignore
             onChange?.( event )
             onValueChange?.( value )
         } }
