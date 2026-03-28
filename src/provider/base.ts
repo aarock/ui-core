@@ -14,9 +14,7 @@ export const baseConfig = {
     mediaQueryDefaultActive,
     selectionStyles: () => null,
     settings: {
-        // Speeds up theme switching between light/dark without a full re-render
         fastSchemeChange: true,
-        // Warn in dev if style values fall outside your token set
-        allowedStyleValues: 'somewhat-strict-web' as const,
+        allowedStyleValues: false,
     },
 }

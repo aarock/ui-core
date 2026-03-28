@@ -222,7 +222,7 @@ export declare const baseConfig: {
     selectionStyles: () => null;
     settings: {
         fastSchemeChange: boolean;
-        allowedStyleValues: "somewhat-strict-web";
+        allowedStyleValues: boolean;
     };
 };
 //# sourceMappingURL=base.d.ts.map

@@ -264,7 +264,7 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
     };
 }, {
     fastSchemeChange: boolean;
-    allowedStyleValues: "somewhat-strict-web";
+    allowedStyleValues: boolean;
 }, "default">;
 export type Config = typeof defaultConfig;
 export type IconTokens = keyof IconMap;

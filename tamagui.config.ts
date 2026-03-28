@@ -18,6 +18,8 @@ const config = createTamagui( {
     themes: baseThemes,
     settings: {
         fastSchemeChange: true,
+        allowedStyleValues: false,
+        // allowedStyleValues: 'all',
     },
 } )
 
