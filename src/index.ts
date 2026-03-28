@@ -3,7 +3,7 @@ export { AnimatePresence, type AnimatePresenceProps } from "@tamagui/animate-pre
 export { PortalProvider as Destination } from "@tamagui/portal"
 export { Slot, type SlotProps } from "@radix-ui/react-slot"
 
-// STRUCTURE // (UIColor exported from ./box)
+// STRUCTURE
 export * from "./box"
 export * from "./text"
 export * from "./table"

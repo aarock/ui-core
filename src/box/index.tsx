@@ -1,8 +1,5 @@
-import { styled, type GetProps, type ColorTokens } from "@tamagui/core"
+import { styled, type GetProps, type GetThemeValueForKey } from "@tamagui/core"
 import { ThemeableStack } from "@tamagui/stacks"
-
-// Variant objects defined outside styled() so they can be shared across components
-// without duplicating. `as const` is required by the Tamagui compiler for type inference.
 
 const card = {
     p: "$md",
@@ -40,38 +37,17 @@ const shadowLg = {
     shadowRadius: 5,
 } as const
 
-// Shorthand variants — write align="start" instead of alignItems="flex-start" etc.
-const align = {
-    start:    { alignItems: 'flex-start' as const },
-    end:      { alignItems: 'flex-end' as const },
-    center:   { alignItems: 'center' as const },
-    stretch:  { alignItems: 'stretch' as const },
-    baseline: { alignItems: 'baseline' as const },
-} as const
-
-const justify = {
-    start:   { justifyContent: 'flex-start' as const },
-    end:     { justifyContent: 'flex-end' as const },
-    center:  { justifyContent: 'center' as const },
-    between: { justifyContent: 'space-between' as const },
-    around:  { justifyContent: 'space-around' as const },
-    evenly:  { justifyContent: 'space-evenly' as const },
-} as const
-
 const sharedVariants = {
     variant: { card, well },
     shadow: { $sm: shadowSm, $md: shadowMd, $lg: shadowLg },
-    align,
-    justify,
 } as const
 
+export type UIColor = GetThemeValueForKey<"color"> // ColorTokens | ( string & {} )
 export type BoxProps = Omit<GetProps<typeof Box>, 'render'>
 export const Box = styled( ThemeableStack, {
     name: 'Box',
     variants: {
         "...size": ( size: number ) => ( { px: size, py: size } ),
-        align,
-        justify,
     },
 } as const )
 
@@ -88,8 +64,6 @@ export const YStack = styled( ThemeableStack, {
     flexDirection: 'column',
     variants: sharedVariants,
 } as const )
-
-export type UIColor = ColorTokens | (string & {})
 
 export type ZStackProps = Omit<GetProps<typeof ZStack>, 'render'>
 export const ZStack = styled( ThemeableStack, {

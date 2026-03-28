@@ -7,11 +7,9 @@ export type GradientExtraProps = {
     end?: LinearGradientPoint | null;
 };
 export declare const Gradient: import("@tamagui/core").TamaguiComponent<Omit<import("@tamagui/core").GetFinalProps<import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
-    justify?: "center" | "end" | "start" | "between" | "around" | "evenly" | undefined;
     shadow?: "$md" | "$lg" | "$sm" | undefined;
-    align?: "center" | "stretch" | "baseline" | "end" | "start" | undefined;
-    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     transparent?: boolean | undefined;
+    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
     elevate?: boolean | undefined;
@@ -19,11 +17,9 @@ export declare const Gradient: import("@tamagui/core").TamaguiComponent<Omit<imp
     chromeless?: boolean | "all" | undefined;
     variant?: "card" | "well" | undefined;
 }>, keyof GradientExtraProps> & GradientExtraProps, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps & GradientExtraProps, import("@tamagui/core").StackStyleBase, {
-    justify?: "center" | "end" | "start" | "between" | "around" | "evenly" | undefined;
     shadow?: "$md" | "$lg" | "$sm" | undefined;
-    align?: "center" | "stretch" | "baseline" | "end" | "start" | undefined;
-    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     transparent?: boolean | undefined;
+    elevation?: number | import("@tamagui/core").SizeTokens | undefined;
     fullscreen?: boolean | undefined;
     circular?: boolean | undefined;
     elevate?: boolean | undefined;

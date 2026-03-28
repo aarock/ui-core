@@ -38,13 +38,13 @@ export declare const baseConfig: {
         };
     };
     shorthands: {
-        textWrap: "whiteSpace";
         text: "textAlign";
         b: "bottom";
         bg: "backgroundColor";
         content: "alignContent";
         grow: "flexGrow";
         items: "alignItems";
+        justify: "justifyContent";
         l: "left";
         m: "margin";
         maxH: "maxHeight";
