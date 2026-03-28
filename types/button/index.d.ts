@@ -1,5 +1,5 @@
 import { type GetProps, type SizeTokens } from "@tamagui/core";
-export type ButtonFrameProps = GetProps<typeof ButtonFrame>;
+export type ButtonFrameProps = Omit<GetProps<typeof ButtonFrame>, 'render'>;
 export declare const ButtonFrame: import("@tamagui/core").TamaguiComponent<import("@tamagui/core").TamaDefer, import("@tamagui/core").TamaguiElement, import("@tamagui/core").RNTamaguiViewNonStyleProps, import("@tamagui/core").StackStyleBase, {
     size?: SizeTokens | undefined;
     variant?: "option" | "danger" | "default" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;
@@ -28,7 +28,7 @@ declare const ButtonIcon: import("@tamagui/core").TamaguiComponent<import("@tama
         readonly color: "color";
     };
 } & import("@tamagui/core").StaticConfigPublic>;
-export type ButtonProps = GetProps<typeof ButtonFrame>;
+export type ButtonProps = Omit<GetProps<typeof ButtonFrame>, 'render'>;
 export declare const Button: import("react").ForwardRefExoticComponent<Omit<import("@tamagui/core").RNTamaguiViewNonStyleProps, "size" | keyof import("@tamagui/core").StackStyleBase | "variant" | "isDisabled" | "isActive" | "isReadOnly"> & import("@tamagui/core").WithThemeValues<import("@tamagui/core").StackStyleBase> & {
     size?: SizeTokens | undefined;
     variant?: "option" | "danger" | "default" | "filter" | "subtle" | "inverse" | "create" | "ghost" | undefined;

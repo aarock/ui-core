@@ -49,17 +49,17 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
         md: import("@tamagui/core").Variable<number>;
         lg: import("@tamagui/core").Variable<number>;
     };
-}, "color" | "space" | "size" | "radius" | "zIndex">, {
+}, "zIndex" | "color" | "space" | "size" | "radius">, {
     light: any;
     dark: any;
 }, {
+    textWrap: "whiteSpace";
     text: "textAlign";
     b: "bottom";
     bg: "backgroundColor";
     content: "alignContent";
     grow: "flexGrow";
     items: "alignItems";
-    justify: "justifyContent";
     l: "left";
     m: "margin";
     maxH: "maxHeight";

@@ -1,4 +1,4 @@
-import { styled, type GetProps } from "@tamagui/core"
+import { styled, type GetProps, type ColorTokens } from "@tamagui/core"
 import { ThemeableStack } from "@tamagui/stacks"
 
 // Variant objects defined outside styled() so they can be shared across components
@@ -65,7 +65,7 @@ const sharedVariants = {
     justify,
 } as const
 
-export type BoxProps = GetProps<typeof Box>
+export type BoxProps = Omit<GetProps<typeof Box>, 'render'>
 export const Box = styled( ThemeableStack, {
     name: 'Box',
     variants: {
@@ -75,21 +75,23 @@ export const Box = styled( ThemeableStack, {
     },
 } as const )
 
-export type XStackProps = GetProps<typeof XStack>
+export type XStackProps = Omit<GetProps<typeof XStack>, 'render'>
 export const XStack = styled( ThemeableStack, {
     name: 'XStack',
     flexDirection: 'row',
     variants: sharedVariants,
 } as const )
 
-export type YStackProps = GetProps<typeof YStack>
+export type YStackProps = Omit<GetProps<typeof YStack>, 'render'>
 export const YStack = styled( ThemeableStack, {
     name: 'YStack',
     flexDirection: 'column',
     variants: sharedVariants,
 } as const )
 
-export type ZStackProps = GetProps<typeof ZStack>
+export type UIColor = ColorTokens | (string & {})
+
+export type ZStackProps = Omit<GetProps<typeof ZStack>, 'render'>
 export const ZStack = styled( ThemeableStack, {
     name: 'ZStack',
     position: 'relative',

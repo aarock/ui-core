@@ -46,7 +46,7 @@ export declare const baseTokens: {
         md: import("@tamagui/core").Variable<number>;
         lg: import("@tamagui/core").Variable<number>;
     };
-}, "color" | "space" | "size" | "radius" | "zIndex">;
+}, "zIndex" | "color" | "space" | "size" | "radius">;
 export declare const baseThemes: {
     light: any;
     dark: any;

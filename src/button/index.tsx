@@ -28,7 +28,7 @@ const shadowPressStyles = {
     shadowOffset: { width: 0, height: 0 },
 }
 
-export type ButtonFrameProps = GetProps<typeof ButtonFrame>
+export type ButtonFrameProps = Omit<GetProps<typeof ButtonFrame>, 'render'>
 export const ButtonFrame = styled( View, {
     context: ButtonContext,
     group: "btn",
@@ -248,7 +248,7 @@ const ButtonIcon = styled( Icon, {
     }
 } as const )
 
-export type ButtonProps = GetProps<typeof ButtonFrame>
+export type ButtonProps = Omit<GetProps<typeof ButtonFrame>, 'render'>
 export const Button = withStaticProperties( ButtonFrame, {
     Frame: ButtonFrame,
     Label: ButtonLabel,
