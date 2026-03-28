@@ -5,6 +5,9 @@ const family = isWeb
     : 'Inter'
 
 const sizes = {
+    sm: 12,
+    md: 14,
+    lg: 18,
     1: 11,
     2: 12,
     3: 13,

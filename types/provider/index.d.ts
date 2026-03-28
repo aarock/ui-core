@@ -128,6 +128,9 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
     heading: {
         family: string;
         size: {
+            readonly sm: 12;
+            readonly md: 14;
+            readonly lg: 18;
             readonly 1: 11;
             readonly 2: 12;
             readonly 3: 13;
@@ -178,6 +181,9 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
     body: {
         family: string;
         size: {
+            readonly sm: 12;
+            readonly md: 14;
+            readonly lg: 18;
             readonly 1: 11;
             readonly 2: 12;
             readonly 3: 13;
@@ -226,6 +232,9 @@ export declare const defaultConfig: import("@tamagui/core").TamaguiInternalConfi
     mono: {
         family: string;
         size: {
+            readonly sm: 12;
+            readonly md: 14;
+            readonly lg: 18;
             readonly 1: 11;
             readonly 2: 12;
             readonly 3: 13;

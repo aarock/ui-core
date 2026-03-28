@@ -2,6 +2,9 @@ export declare const fonts: {
     heading: {
         family: string;
         size: {
+            readonly sm: 12;
+            readonly md: 14;
+            readonly lg: 18;
             readonly 1: 11;
             readonly 2: 12;
             readonly 3: 13;
@@ -52,6 +55,9 @@ export declare const fonts: {
     body: {
         family: string;
         size: {
+            readonly sm: 12;
+            readonly md: 14;
+            readonly lg: 18;
             readonly 1: 11;
             readonly 2: 12;
             readonly 3: 13;
@@ -100,6 +106,9 @@ export declare const fonts: {
     mono: {
         family: string;
         size: {
+            readonly sm: 12;
+            readonly md: 14;
+            readonly lg: 18;
             readonly 1: 11;
             readonly 2: 12;
             readonly 3: 13;
